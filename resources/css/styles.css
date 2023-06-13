@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   min-width: 320px;
+}
+
+header {
+    top: 0;
+    position: fixed;
+    display: inline-block;
+    justify-content: space-between;
+    height: 69px;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    border-bottom: 5px solid gray;
+    font-size: 22px;
+  }
+
+  navbar {
+    left:0
+  }
