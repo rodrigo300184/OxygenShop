@@ -130,3 +130,23 @@ nav {
   text-align: center;
   color: #000000;
 }
+
+.bt-1 {
+  margin: 0 auto;
+  background: #08a6e4;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 40px;
+  width: 310px;
+  height: 67px;
+
+  p {
+    padding-top:22px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
