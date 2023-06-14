@@ -55,7 +55,7 @@ nav {
   right: 30px;
   height: 2px;
   width: 20px;
-  background: #07ACE6;
+  background: #07ace6;
 }
 .menu_bar .icon-1 {
   top: 29px;
@@ -99,17 +99,26 @@ nav {
   color: #000000;
 }
 
-/*h1{
-font-family: 'Raleway';
-font-style: normal;
-font-weight: 400;
-font-size: 35px;
-line-height: 41px;
+.title-1 {
+  margin-top: 170px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 41px;
+  text-align: center;
+  color: #000000;
+}
 
-
-text-align: center;
-
-color: #000000;
-}*/
+.paragraph-1 {
+  margin: 20px auto 28px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+}
 
 /*# sourceMappingURL=styles.css.map */
