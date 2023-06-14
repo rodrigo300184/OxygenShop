@@ -1,15 +1,15 @@
 /*Variables*/
-$principal-title-color:#08a6e4;
-$principal-tittle-font-size:32px;
+$principal-title-color: #08a6e4;
+$principal-tittle-font-size: 32px;
 $header-bg-color: #ffffff;
-$header-font-size:22px;
-$nav-links-color:#a5a5a5;
-$nav-links-color-hover:#000000;
-
-$nav-font-size:11px;
+$header-font-size: 22px;
+$nav-links-color: #a5a5a5;
+$nav-links-color-hover: #000000;
+$nav-icons-bg-color:#07ACE6 ;
+$nav-font-size: 11px;
 
 * {
-  //box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -41,10 +41,15 @@ header:hover {
   }
 }
 
+nav {
+  height: fit-content;
+}
+
 .menu_bar {
   width: 100%;
+  height: max-content;
 
-  h1 {
+  p {
     font-family: "Raleway";
     font-style: normal;
     font-weight: 300;
@@ -57,33 +62,34 @@ header:hover {
 
   .icon {
     position: absolute;
+    right: 30px;
+    height: 2px;
+    width: 20px;
+    background:$nav-icons-bg-color;
   }
   .icon-1 {
     top: 29px;
-    right: 30px;
   }
   .icon-2 {
     top: 34px;
-    right: 30px;
   }
   .icon-3 {
     top: 39px;
-    right: 30px;
   }
   .icon-4 {
     display: none;
+    background: none;
     top: 24px;
-    right: 30px;
     width: 15.56px;
     height: 15.56px;
-    transform: rotateX("45");
+    transform: rotateX("-45");
   }
 }
 
 .navbar {
   display: none;
   margin-top: 6px;
-  padding-top:26px;
+  padding-top: 26px;
   margin-bottom: 33.65px;
   a {
     margin-top: 14px;
@@ -99,8 +105,8 @@ header:hover {
     color: $nav-links-color;
     text-decoration: none;
   }
-  a:hover{
-    color:$nav-links-color-hover;
+  a:hover {
+    color: $nav-links-color-hover;
   }
 }
 /*h1{

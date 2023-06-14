@@ -1,5 +1,6 @@
 /*Variables*/
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -31,10 +32,15 @@ header:hover .icon-4 {
   display: block;
 }
 
+nav {
+  height: fit-content;
+}
+
 .menu_bar {
   width: 100%;
+  height: max-content;
 }
-.menu_bar h1 {
+.menu_bar p {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 300;
@@ -46,26 +52,27 @@ header:hover .icon-4 {
 }
 .menu_bar .icon {
   position: absolute;
+  right: 30px;
+  height: 2px;
+  width: 20px;
+  background: #07ACE6;
 }
 .menu_bar .icon-1 {
   top: 29px;
-  right: 30px;
 }
 .menu_bar .icon-2 {
   top: 34px;
-  right: 30px;
 }
 .menu_bar .icon-3 {
   top: 39px;
-  right: 30px;
 }
 .menu_bar .icon-4 {
   display: none;
+  background: none;
   top: 24px;
-  right: 30px;
   width: 15.56px;
   height: 15.56px;
-  transform: rotateX("45");
+  transform: rotateX("-45");
 }
 
 .navbar {
