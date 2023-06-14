@@ -11,16 +11,28 @@ body {
 header {
   top: 0;
   position: fixed;
-  height: 65px;
+  height: 70px;
   width: 100%;
   background: #ffffff;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.29);
   font-size: 22px;
 }
 
+header:hover {
+  height: fit-content;
+}
+header:hover .navbar {
+  display: block;
+}
+header:hover .icon {
+  display: none;
+}
+header:hover .icon-4 {
+  display: block;
+}
+
 .menu_bar {
-  display: inline-block;
-  width: 49.8%;
+  width: 100%;
 }
 .menu_bar h1 {
   font-family: "Raleway";
@@ -29,24 +41,68 @@ header {
   font-size: 32px;
   line-height: 37px;
   color: #08a6e4;
-  margin: 17px 25px 16px 25px;
+  margin-top: 17px;
+  margin-left: 25px;
 }
-.menu_bar span {
-  float: right;
+.menu_bar .icon {
+  position: absolute;
+}
+.menu_bar .icon-1 {
+  top: 29px;
+  right: 30px;
+}
+.menu_bar .icon-2 {
+  top: 34px;
+  right: 30px;
+}
+.menu_bar .icon-3 {
+  top: 39px;
+  right: 30px;
+}
+.menu_bar .icon-4 {
+  display: none;
+  top: 24px;
+  right: 30px;
+  width: 15.56px;
+  height: 15.56px;
+  transform: rotateX("45");
 }
 
+.navbar {
+  display: none;
+  margin-top: 6px;
+  padding-top: 26px;
+  margin-bottom: 33.65px;
+}
 .navbar a {
+  margin-top: 14px;
+  margin-left: 25px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 11px;
   line-height: 1em;
-  /* identical to box height, or 136% */
   text-align: center;
   letter-spacing: 3.28px;
   text-transform: uppercase;
   color: #a5a5a5;
   text-decoration: none;
 }
+.navbar a:hover {
+  color: #000000;
+}
+
+/*h1{
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 41px;
+
+
+text-align: center;
+
+color: #000000;
+}*/
 
 /*# sourceMappingURL=styles.css.map */

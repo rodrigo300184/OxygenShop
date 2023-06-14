@@ -1,5 +1,12 @@
 /*Variables*/
-$border-color: linear-gradient(to bottom, gray, white);
+$principal-title-color:#08a6e4;
+$principal-tittle-font-size:32px;
+$header-bg-color: #ffffff;
+$header-font-size:22px;
+$nav-links-color:#a5a5a5;
+$nav-links-color-hover:#000000;
+
+$nav-font-size:11px;
 
 * {
   //box-sizing: border-box;
@@ -14,46 +21,97 @@ body {
 header {
   top: 0;
   position: fixed;
-  height: 65px;
+  height: 70px;
   width: 100%;
-  background: #ffffff;
+  background: $header-bg-color;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.29);
-  font-size: 22px;
+  font-size: $header-font-size;
+}
+
+header:hover {
+  height: fit-content;
+  .navbar {
+    display: block;
+  }
+  .icon {
+    display: none;
+  }
+  .icon-4 {
+    display: block;
+  }
 }
 
 .menu_bar {
-  display: inline-block;
-  width: 49.8%;
-  
+  width: 100%;
+
   h1 {
     font-family: "Raleway";
     font-style: normal;
     font-weight: 300;
-    font-size: 32px;
+    font-size: $principal-tittle-font-size;
     line-height: 37px;
-    color: #08a6e4;
-    margin: 17px 25px 16px 25px;
+    color: $principal-title-color;
+    margin-top: 17px;
+    margin-left: 25px;
   }
 
-  span{
-    float: right;
+  .icon {
+    position: absolute;
   }
-
-  
+  .icon-1 {
+    top: 29px;
+    right: 30px;
+  }
+  .icon-2 {
+    top: 34px;
+    right: 30px;
+  }
+  .icon-3 {
+    top: 39px;
+    right: 30px;
+  }
+  .icon-4 {
+    display: none;
+    top: 24px;
+    right: 30px;
+    width: 15.56px;
+    height: 15.56px;
+    transform: rotateX("45");
+  }
 }
 
 .navbar {
+  display: none;
+  margin-top: 6px;
+  padding-top:26px;
+  margin-bottom: 33.65px;
   a {
+    margin-top: 14px;
+    margin-left: 25px;
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 11px;
+    font-size: $nav-font-size;
     line-height: 1em;
-    /* identical to box height, or 136% */
     text-align: center;
     letter-spacing: 3.28px;
     text-transform: uppercase;
-    color: #a5a5a5;
+    color: $nav-links-color;
     text-decoration: none;
   }
+  a:hover{
+    color:$nav-links-color-hover;
+  }
 }
+/*h1{
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 41px;
+
+
+text-align: center;
+
+color: #000000;
+}*/
