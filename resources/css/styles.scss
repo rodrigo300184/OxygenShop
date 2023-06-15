@@ -156,12 +156,11 @@ nav {
 
 .picture-1 {
   margin: 51px auto 0;
-  
+  max-width: 779px;
 
   img {
     position: absolute;
     max-height: 267px;
-    max-width: 779px;
     left: 50%;
     transform: translate(-50%, 0);
   }
