@@ -1,4 +1,5 @@
 /*Variables*/
+/*Mixin*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,6 +18,7 @@ header {
   background: #ffffff;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.29);
   font-size: 22px;
+  z-index: 2;
 }
 
 header:hover {
@@ -144,6 +146,7 @@ nav {
 }
 
 .picture-1 {
+  position: relative;
   margin: 51px auto 0;
 }
 .picture-1 img {
@@ -151,6 +154,67 @@ nav {
   max-height: 267px;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.paragraph-2 {
+  margin: 331px 36px 0 36px;
+}
+.paragraph-2 p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  color: #000000;
+}
+
+.daily-entries {
+  width: 100%;
+}
+.daily-entries p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+  text-align: center;
+  letter-spacing: 5.96px;
+  color: #000000;
+}
+
+.first-circle {
+  position: relative;
+  width: 62.71px;
+  height: 62.71px;
+  border-radius: 50%;
+  margin: 25px auto 14.18px;
+  background-color: #fb3b64;
+}
+
+.person-body {
+  position: absolute;
+  left: 30.27px;
+  top: 3px;
+}
+
+.second-circle {
+  position: relative;
+  width: 62.71px;
+  height: 62.71px;
+  border-radius: 50%;
+  margin: 25px auto 14.18px;
+  background-color: #08A6E4;
+}
+
+.third-circle {
+  position: relative;
+  width: 62.71px;
+  height: 62.71px;
+  border-radius: 50%;
+  margin: 25px auto 14.18px;
+  background-color: #55DFB4;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,6 +8,15 @@ $nav-links-color-hover: #000000;
 $nav-icons-bg-color: #07ace6;
 $nav-font-size: 11px;
 
+/*Mixin*/
+
+@mixin circle{
+  position: relative;
+  width: 62.71px;
+  height: 62.71px;
+  border-radius: 50%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,6 +35,7 @@ header {
   background: $header-bg-color;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.29);
   font-size: $header-font-size;
+  z-index: 2;
 }
 
 header:hover {
@@ -155,8 +165,8 @@ nav {
 }
 
 .picture-1 {
+  position: relative;
   margin: 51px auto 0;
-  max-width: 779px;
 
   img {
     position: absolute;
@@ -164,4 +174,53 @@ nav {
     left: 50%;
     transform: translate(-50%, 0);
   }
+}
+
+.paragraph-2 {
+  margin: 331px 36px 0 36px;
+  p {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #000000;
+  }
+}
+.daily-entries{
+  width:100%;
+  p{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    
+    text-align: center;
+    letter-spacing: 5.96px;
+    
+    color: #000000; 
+  }
+}
+.first-circle{
+  @include circle;
+  margin: 25px auto 14.18px;
+  background-color: #fb3b64;
+}
+.person-body{
+  position: absolute;
+  left: 30.27px;
+  top: 3px;
+}
+.second-circle{
+  @include circle;
+  margin: 25px auto 14.18px;
+  background-color: #08A6E4;
+}
+.third-circle{
+  @include circle;
+  margin: 25px auto 14.18px;
+  background-color: #55DFB4;
 }
