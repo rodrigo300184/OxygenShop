@@ -141,7 +141,7 @@ nav {
 
   a {
     display: block;
-    padding-top:22px;
+    padding-top: 22px;
     padding-bottom: 23px;
     font-family: "Open Sans";
     font-style: normal;
@@ -151,5 +151,17 @@ nav {
     text-align: center;
     color: #ffffff;
     text-decoration: none;
+  }
+}
+
+.picture-1 {
+  margin: 51px auto 0;
+  
+
+  img {
+    position: absolute;
+    max-height: 267px;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 }
