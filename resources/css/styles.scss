@@ -7,15 +7,50 @@ $nav-links-color: #a5a5a5;
 $nav-links-color-hover: #000000;
 $nav-icons-bg-color: #07ace6;
 $nav-font-size: 11px;
+$first-circle-color:#fb3b64;
+$second-circle-color:#08a6e4;
+$third-circle-color:#55dfb4;
+$big-numbers-color: #000000;
+$big-numbers-font-size: 20px;
+$descriptions-color: #a5a5a5;
+$desriptions-font-size: 17px;
+
 
 /*Mixin*/
 
-@mixin circle{
+@mixin circle {
+  margin: 25px auto 14px;
   position: relative;
   width: 62.71px;
   height: 62.71px;
   border-radius: 50%;
 }
+
+@mixin big-numbers {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: $big-numbers-font-size;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+  text-align: center;
+  letter-spacing: 5.96px;
+  color: $big-numbers-color;
+}
+
+@mixin descriptions {
+  margin-top: 19.06px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: $desriptions-font-size;
+  line-height: 20px;
+  /* identical to box height, or 118% */
+  text-align: center;
+  color: $descriptions-color;
+}
+
+/*CSS*/
 
 * {
   box-sizing: border-box;
@@ -188,39 +223,50 @@ nav {
     color: #000000;
   }
 }
-.daily-entries{
-  width:100%;
-  p{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 24px;
-    /* identical to box height, or 120% */
-    
-    text-align: center;
-    letter-spacing: 5.96px;
-    
-    color: #000000; 
-  }
+.daily-entries,
+.seen-products,
+.added-post {
+  width: 100%;
 }
-.first-circle{
+
+.big-numbers {
+  @include big-numbers;
+}
+
+.descriptions {
+  @include descriptions;
+}
+
+.first-circle {
   @include circle;
-  margin: 25px auto 14.18px;
-  background-color: #fb3b64;
+  background-color: $first-circle-color;
 }
-.person-body{
+.person-body {
   position: absolute;
   left: 30.27px;
   top: 3px;
+  width: 44px;
+  height: 52px;
 }
-.second-circle{
+.second-circle {
   @include circle;
-  margin: 25px auto 14.18px;
-  background-color: #08A6E4;
+  background-color: $second-circle-color;
 }
-.third-circle{
+.eye {
+  position: absolute;
+  left: 23px;
+  top: 14px;
+  width: 65.43px;
+  height: 36.5px;
+}
+.third-circle {
   @include circle;
-  margin: 25px auto 14.18px;
-  background-color: #55DFB4;
+  background-color: $third-circle-color;
+}
+.catalogo {
+  position: absolute;
+  left: 31.34px;
+  top: 6px;
+  width: 52px;
+  height: 48px;
 }

@@ -1,5 +1,6 @@
 /*Variables*/
 /*Mixin*/
+/*CSS*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -169,10 +170,13 @@ nav {
   color: #000000;
 }
 
-.daily-entries {
+.daily-entries,
+.seen-products,
+.added-post {
   width: 100%;
 }
-.daily-entries p {
+
+.big-numbers {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
@@ -184,12 +188,24 @@ nav {
   color: #000000;
 }
 
+.descriptions {
+  margin-top: 19.06px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  /* identical to box height, or 118% */
+  text-align: center;
+  color: #a5a5a5;
+}
+
 .first-circle {
+  margin: 25px auto 14px;
   position: relative;
   width: 62.71px;
   height: 62.71px;
   border-radius: 50%;
-  margin: 25px auto 14.18px;
   background-color: #fb3b64;
 }
 
@@ -197,24 +213,42 @@ nav {
   position: absolute;
   left: 30.27px;
   top: 3px;
+  width: 44px;
+  height: 52px;
 }
 
 .second-circle {
+  margin: 25px auto 14px;
   position: relative;
   width: 62.71px;
   height: 62.71px;
   border-radius: 50%;
-  margin: 25px auto 14.18px;
-  background-color: #08A6E4;
+  background-color: #08a6e4;
+}
+
+.eye {
+  position: absolute;
+  left: 23px;
+  top: 14px;
+  width: 65.43px;
+  height: 36.5px;
 }
 
 .third-circle {
+  margin: 25px auto 14px;
   position: relative;
   width: 62.71px;
   height: 62.71px;
   border-radius: 50%;
-  margin: 25px auto 14.18px;
-  background-color: #55DFB4;
+  background-color: #55dfb4;
+}
+
+.catalogo {
+  position: absolute;
+  left: 31.34px;
+  top: 6px;
+  width: 52px;
+  height: 48px;
 }
 
 /*# sourceMappingURL=styles.css.map */
