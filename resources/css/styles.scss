@@ -7,14 +7,13 @@ $nav-links-color: #a5a5a5;
 $nav-links-color-hover: #000000;
 $nav-icons-bg-color: #07ace6;
 $nav-font-size: 11px;
-$first-circle-color:#fb3b64;
-$second-circle-color:#08a6e4;
-$third-circle-color:#55dfb4;
+$first-circle-color: #fb3b64;
+$second-circle-color: #08a6e4;
+$third-circle-color: #55dfb4;
 $big-numbers-color: #000000;
 $big-numbers-font-size: 20px;
 $descriptions-color: #a5a5a5;
 $desriptions-font-size: 17px;
-
 
 /*Mixin*/
 
@@ -61,6 +60,8 @@ $desriptions-font-size: 17px;
 body {
   min-width: 320px;
 }
+
+/*----------header + nav-----------*/
 
 header {
   top: 0;
@@ -153,6 +154,8 @@ nav {
   a:hover {
     color: $nav-links-color-hover;
   }
+
+  /*----------section-1----------*/
 }
 .title-1 {
   margin-top: 170px;
@@ -269,4 +272,64 @@ nav {
   top: 6px;
   width: 52px;
   height: 48px;
+}
+
+/*----------section-2----------*/
+
+.section-2 {
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 42px 30px;
+}
+
+.advantage-1 {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 37.11px;
+}
+
+.image-1 {
+  position: relative;
+  margin: 0 auto;
+  width: 192.76px;
+  height: 109.93px;
+
+  img {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.item-1 {
+  position: absolute;
+  width: 90.12px;
+  height: 90.12px;
+  left: 110px;
+  top: -21px;
+  background: #fb3b64;
+  border-radius: 41px;
+  transform: rotate(-45deg);
+}
+.title-2 {
+  margin: 27px 0 0 22px;
+  height: 72px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #000000;
+}
+
+.paragraph-3 {
+  padding: 0 21px 30px 21px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  /* or 150% */
+  color: #000000;
+  max-height: 84px;
 }

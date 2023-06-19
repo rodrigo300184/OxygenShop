@@ -11,6 +11,7 @@ body {
   min-width: 320px;
 }
 
+/*----------header + nav-----------*/
 header {
   top: 0;
   position: fixed;
@@ -83,6 +84,7 @@ nav {
   margin-top: 6px;
   padding-top: 26px;
   margin-bottom: 33.65px;
+  /*----------section-1----------*/
 }
 .navbar a {
   margin-top: 14px;
@@ -249,6 +251,65 @@ nav {
   top: 6px;
   width: 52px;
   height: 48px;
+}
+
+/*----------section-2----------*/
+.section-2 {
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 42px 30px;
+}
+
+.advantage-1 {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 37.11px;
+}
+
+.image-1 {
+  position: relative;
+  margin: 0 auto;
+  width: 192.76px;
+  height: 109.93px;
+}
+.image-1 img {
+  position: relative;
+  z-index: 1;
+}
+
+.item-1 {
+  position: absolute;
+  width: 90.12px;
+  height: 90.12px;
+  left: 110px;
+  top: -21px;
+  background: #fb3b64;
+  border-radius: 41px;
+  transform: rotate(-45deg);
+}
+
+.title-2 {
+  margin: 27px 0 0 22px;
+  height: 72px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #000000;
+}
+
+.paragraph-3 {
+  padding: 0 21px 30px 21px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  /* or 150% */
+  color: #000000;
+  max-height: 84px;
 }
 
 /*# sourceMappingURL=styles.css.map */
