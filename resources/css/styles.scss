@@ -154,8 +154,12 @@ nav {
   a:hover {
     color: $nav-links-color-hover;
   }
+}
 
-  /*----------section-1----------*/
+/*----------section-1----------*/
+
+.section-1 {
+  padding-bottom: 40px;
 }
 .title-1 {
   margin-top: 170px;

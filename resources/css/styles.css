@@ -84,7 +84,6 @@ nav {
   margin-top: 6px;
   padding-top: 26px;
   margin-bottom: 33.65px;
-  /*----------section-1----------*/
 }
 .navbar a {
   margin-top: 14px;
@@ -102,6 +101,11 @@ nav {
 }
 .navbar a:hover {
   color: #000000;
+}
+
+/*----------section-1----------*/
+.section-1 {
+  padding-bottom: 40px;
 }
 
 .title-1 {
