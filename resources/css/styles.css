@@ -153,18 +153,16 @@ nav {
 }
 
 .picture-1 {
-  position: relative;
   margin: 51px auto 0;
-}
-.picture-1 img {
-  position: absolute;
-  max-height: 267px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  background-image: url("../images/Background.jpg");
+  height: 267px;
+  max-width: 779px;
+  background-position: center center;
+  background-size: cover;
 }
 
 .paragraph-2 {
-  margin: 331px 36px 0 36px;
+  margin: 13px 36px 0 36px;
 }
 .paragraph-2 p {
   font-family: "Raleway";
@@ -361,5 +359,7 @@ nav {
   height: 195px;
   top: 0;
 }
+
+/*----------Section 3----------*/
 
 /*# sourceMappingURL=styles.css.map */
