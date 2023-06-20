@@ -224,7 +224,6 @@ nav {
   max-width: 779px;
   background-position: center center;
   background-size: cover;
-  
 }
 
 .paragraph-2 {
@@ -330,7 +329,6 @@ nav {
   @include section2-titles;
   margin: 27px 0 0 22px;
   height: 72px;
-  
 }
 
 .paragraph-3 {
@@ -370,10 +368,9 @@ nav {
   margin: 0 auto;
   width: 314px;
   height: 195px;
-  
 
   img {
-    margin:25px 30px 0 auto;
+    margin: 25px 30px 0 auto;
     position: relative;
     z-index: 1;
   }
@@ -388,7 +385,122 @@ nav {
   width: 314px;
   height: 195px;
   top: 0;
-  
 }
 
 /*----------Section 3----------*/
+
+.title-3 {
+  margin-top: 53px;
+  margin-bottom: 14px;
+  text-align: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+
+.subtitle-3 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+  color: #13253b;
+  margin-top: 70px;
+  margin-left: 50px;
+}
+
+.basic {
+  margin: 0 auto;
+  width: 293px;
+  background: #ffffff;
+  border: 1px solid #fb3b64;
+  border-radius: 18px;
+  height: 251px;
+}
+
+.basic:hover{
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba(251, 59, 100,0.29) ;
+}
+
+.basic-price {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 64px;
+  /* identical to box height, or 139% */
+  color: #fb3b64;
+  margin-left: 45px;
+}
+
+.item-list {
+  position: relative;
+  list-style: none;
+  top: -133px;
+  left: 168px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  width: 150px;
+  color: #000000;
+
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+.check-yes {
+  position: relative;
+}
+
+.check-yes::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 4px;
+  left: -18px;
+  background-image: url("../images/Check-yes.png");
+}
+
+.check-not {
+  position: relative;
+}
+.check-not::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 4px;
+  left: -18px;
+  background-image: url("../images/Check-not.png");
+}
+
+.submit-basic {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  background: #eb476e;
+  border-radius: 23px;
+  border: none;
+  color: white;
+  top: -129px;
+  left: 71.5px;
+}
+.submit-basic:hover {
+  background-color: white;
+  color: #eb476e;
+  border: 1px solid #eb476e;
+}
