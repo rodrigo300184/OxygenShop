@@ -14,6 +14,8 @@ $big-numbers-color: #000000;
 $big-numbers-font-size: 20px;
 $descriptions-color: #a5a5a5;
 $desriptions-font-size: 17px;
+$section2-titles-font-color: #000000;
+$section2-titles-font-size: 30px;
 
 /*Mixin*/
 
@@ -47,6 +49,15 @@ $desriptions-font-size: 17px;
   /* identical to box height, or 118% */
   text-align: center;
   color: $descriptions-color;
+}
+
+@mixin section2-titles {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: $section2-titles-font-size;
+  line-height: 35px;
+  color: $section2-titles-font-color;
 }
 
 /*CSS*/
@@ -291,6 +302,8 @@ nav {
   width: 100%;
   background-color: #ffffff;
   padding-top: 37.11px;
+  margin-bottom: 41px;
+  overflow: hidden;
 }
 
 .image-1 {
@@ -315,15 +328,11 @@ nav {
   border-radius: 41px;
   transform: rotate(-45deg);
 }
-.title-2 {
+.section-2-title {
+  @include section2-titles;
   margin: 27px 0 0 22px;
   height: 72px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 35px;
-  color: #000000;
+  
 }
 
 .paragraph-3 {
@@ -336,4 +345,51 @@ nav {
   /* or 150% */
   color: #000000;
   max-height: 84px;
+}
+
+.image-2 {
+  position: relative;
+  margin: 0 auto;
+  width: 175px;
+  height: 134.99px;
+
+  img {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.item-2 {
+  position: absolute;
+  margin: 0 auto;
+  background-color: $second-circle-color;
+  width: 131.8px;
+  height: 131.8px;
+  border-radius: 50%;
+  top: 0;
+}
+.image-3 {
+  position: relative;
+  margin: 0 auto;
+  width: 314px;
+  height: 195px;
+  
+
+  img {
+    margin:25px 30px 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.item-3 {
+  position: absolute;
+  margin: 0 auto;
+  background-color: $third-circle-color;
+  border: 1px solid #e8e9ed;
+  border-radius: 5px;
+  width: 314px;
+  height: 195px;
+  top: 0;
+  
 }

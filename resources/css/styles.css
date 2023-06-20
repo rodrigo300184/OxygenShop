@@ -269,6 +269,8 @@ nav {
   width: 100%;
   background-color: #ffffff;
   padding-top: 37.11px;
+  margin-bottom: 41px;
+  overflow: hidden;
 }
 
 .image-1 {
@@ -293,15 +295,15 @@ nav {
   transform: rotate(-45deg);
 }
 
-.title-2 {
-  margin: 27px 0 0 22px;
-  height: 72px;
+.section-2-title {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;
   color: #000000;
+  margin: 27px 0 0 22px;
+  height: 72px;
 }
 
 .paragraph-3 {
@@ -314,6 +316,50 @@ nav {
   /* or 150% */
   color: #000000;
   max-height: 84px;
+}
+
+.image-2 {
+  position: relative;
+  margin: 0 auto;
+  width: 175px;
+  height: 134.99px;
+}
+.image-2 img {
+  position: relative;
+  z-index: 1;
+}
+
+.item-2 {
+  position: absolute;
+  margin: 0 auto;
+  background-color: #08a6e4;
+  width: 131.8px;
+  height: 131.8px;
+  border-radius: 50%;
+  top: 0;
+}
+
+.image-3 {
+  position: relative;
+  margin: 0 auto;
+  width: 314px;
+  height: 195px;
+}
+.image-3 img {
+  margin: 25px 30px 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.item-3 {
+  position: absolute;
+  margin: 0 auto;
+  background-color: #55dfb4;
+  border: 1px solid #e8e9ed;
+  border-radius: 5px;
+  width: 314px;
+  height: 195px;
+  top: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
