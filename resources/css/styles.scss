@@ -16,6 +16,8 @@ $descriptions-color: #a5a5a5;
 $desriptions-font-size: 17px;
 $section2-titles-font-color: #000000;
 $section2-titles-font-size: 30px;
+$section3-box1-button1-color: #EB476E;  //Box, button and price color
+ 
 
 /*Mixin*/
 
@@ -58,6 +60,41 @@ $section2-titles-font-size: 30px;
   font-size: $section2-titles-font-size;
   line-height: 35px;
   color: $section2-titles-font-color;
+}
+
+@mixin section-3-box {
+  margin: 0 auto;
+  width: 293px;
+  height: 251px;
+  background: #ffffff;
+  border-radius: 18px;
+}
+
+@mixin section-3-prices {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 64px;
+  margin-left: 45px;
+}
+
+@mixin section-3-subtitles {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #13253b;
+}
+
+@mixin section-3-buttons {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  border: none;
+  color: white;
 }
 
 /*CSS*/
@@ -389,7 +426,7 @@ nav {
 
 /*----------Section 3----------*/
 
-.title-3 {
+.section-3-title {
   margin-top: 53px;
   margin-bottom: 14px;
   text-align: center;
@@ -401,41 +438,25 @@ nav {
   color: #000000;
 }
 
-.subtitle-3 {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  /* identical to box height, or 120% */
-  color: #13253b;
+.basic-box {
+  @include section-3-box;
+  border: 1px solid $section3-box1-button1-color;
+}
+
+.basic-subtitle {
+  @include section-3-subtitles;
   margin-top: 70px;
   margin-left: 50px;
 }
 
-.basic {
-  margin: 0 auto;
-  width: 293px;
-  background: #ffffff;
-  border: 1px solid #fb3b64;
-  border-radius: 18px;
-  height: 251px;
-}
-
-.basic:hover{
+.basic-box:hover {
   transform: scale(1.05);
-  box-shadow: 5px 10px 27px rgba(251, 59, 100,0.29) ;
+  box-shadow: 5px 10px 27px rgba($section3-box1-button1-color, 0.29);
 }
 
 .basic-price {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 46px;
-  line-height: 64px;
-  /* identical to box height, or 139% */
-  color: #fb3b64;
-  margin-left: 45px;
+  @include section-3-prices;
+  color: $section3-box1-button1-color;
 }
 
 .item-list {
@@ -448,7 +469,6 @@ nav {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  /* identical to box height */
   width: 150px;
   color: #000000;
 
@@ -488,19 +508,14 @@ nav {
   background-image: url("../images/Check-not.png");
 }
 
-.submit-basic {
-  position: relative;
-  width: 150px;
-  height: 50px;
-  background: #eb476e;
-  border-radius: 23px;
-  border: none;
-  color: white;
+.basic-submit {
+  @include section-3-buttons;
+  background: $section3-box1-button1-color;
   top: -129px;
   left: 71.5px;
 }
-.submit-basic:hover {
+.basic-submit:hover {
   background-color: white;
-  color: #eb476e;
-  border: 1px solid #eb476e;
+  color: $section3-box1-button1-color;
+  border: 1px solid $section3-box1-button1-color;
 }

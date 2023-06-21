@@ -360,7 +360,7 @@ nav {
 }
 
 /*----------Section 3----------*/
-.title-3 {
+.section-3-title {
   margin-top: 53px;
   margin-bottom: 14px;
   text-align: center;
@@ -372,30 +372,29 @@ nav {
   color: #000000;
 }
 
-.subtitle-3 {
+.basic-box {
+  margin: 0 auto;
+  width: 293px;
+  height: 251px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #EB476E;
+}
+
+.basic-subtitle {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  /* identical to box height, or 120% */
   color: #13253b;
   margin-top: 70px;
   margin-left: 50px;
 }
 
-.basic {
-  margin: 0 auto;
-  width: 293px;
-  background: #ffffff;
-  border: 1px solid #fb3b64;
-  border-radius: 18px;
-  height: 251px;
-}
-
-.basic:hover {
+.basic-box:hover {
   transform: scale(1.05);
-  box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.29);
+  box-shadow: 5px 10px 27px rgba(235, 71, 110, 0.29);
 }
 
 .basic-price {
@@ -404,9 +403,8 @@ nav {
   font-weight: 300;
   font-size: 46px;
   line-height: 64px;
-  /* identical to box height, or 139% */
-  color: #fb3b64;
   margin-left: 45px;
+  color: #EB476E;
 }
 
 .item-list {
@@ -419,7 +417,6 @@ nav {
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  /* identical to box height */
   width: 150px;
   color: #000000;
 }
@@ -459,22 +456,22 @@ nav {
   background-image: url("../images/Check-not.png");
 }
 
-.submit-basic {
+.basic-submit {
   position: relative;
   width: 150px;
   height: 50px;
-  background: #eb476e;
   border-radius: 23px;
   border: none;
   color: white;
+  background: #EB476E;
   top: -129px;
   left: 71.5px;
 }
 
-.submit-basic:hover {
+.basic-submit:hover {
   background-color: white;
-  color: #eb476e;
-  border: 1px solid #eb476e;
+  color: #EB476E;
+  border: 1px solid #EB476E;
 }
 
 /*# sourceMappingURL=styles.css.map */
