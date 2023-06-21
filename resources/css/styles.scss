@@ -620,4 +620,61 @@ nav {
   font-size: 40px;
   line-height: 47px;
   color: #000000;
+  margin: 77px 0 5px 30px;
+}
+
+.contact-subtitle {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  margin-left: 30px;
+}
+
+.contact-email {
+  position: relative;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #a5a5a5;
+  margin: 35px 0 17px 65px;
+}
+
+.contact-email::before {
+  content: "";
+  height: 18px;
+  width: 22px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 2px;
+  left: -32px;
+  background-image: url("../images/Mail.png");
+}
+
+.contact-phone {
+  position: relative;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #a5a5a5;
+  margin: 0 0 17px 65px;
+}
+
+.contact-phone::before {
+  content: "";
+  height: 18px;
+  width: 22px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 2px;
+  left: -32px;
+  background-image: url("../images/Phone.png");
 }
