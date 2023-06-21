@@ -97,7 +97,7 @@ $section3-box3-button-color: #55dfb4; //Box, button and price color of box 3
   color: white;
 }
 
-@mixin limited-offer-text{
+@mixin limited-offer-text {
   position: relative;
   font-family: "Raleway";
   font-style: normal;
@@ -556,7 +556,7 @@ nav {
 .professional-submit {
   @include section-3-buttons;
   background: $section3-box2-button-color;
-  top: -129px;
+  top: -143px;
   left: 71.5px;
 }
 .professional-submit:hover {
@@ -567,8 +567,8 @@ nav {
 
 .professional-offer {
   @include limited-offer-text;
-  top:-205px;
-  left:51px;
+  top: -205px;
+  left: 51px;
 }
 
 .premium-box {
@@ -596,7 +596,7 @@ nav {
 .premium-submit {
   @include section-3-buttons;
   background: $section3-box3-button-color;
-  top: -129px;
+  top: -143px;
   left: 71.5px;
 }
 .premium-submit:hover {
@@ -607,6 +607,17 @@ nav {
 
 .premium-offer {
   @include limited-offer-text;
-  top:-205px;
-  left:37px;
+  top: -205px;
+  left: 37px;
+}
+
+/*----------Contact section----------*/
+
+.contact-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  color: #000000;
 }

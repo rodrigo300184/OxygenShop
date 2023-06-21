@@ -517,7 +517,7 @@ nav {
   border: none;
   color: white;
   background: #07ace6;
-  top: -129px;
+  top: -143px;
   left: 71.5px;
 }
 
@@ -582,7 +582,7 @@ nav {
   border: none;
   color: white;
   background: #55dfb4;
-  top: -129px;
+  top: -143px;
   left: 71.5px;
 }
 
@@ -602,6 +602,16 @@ nav {
   color: #13253b;
   top: -205px;
   left: 37px;
+}
+
+/*----------Contact section----------*/
+.contact-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  color: #000000;
 }
 
 /*# sourceMappingURL=styles.css.map */
