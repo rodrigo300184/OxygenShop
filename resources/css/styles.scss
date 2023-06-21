@@ -16,8 +16,9 @@ $descriptions-color: #a5a5a5;
 $desriptions-font-size: 17px;
 $section2-titles-font-color: #000000;
 $section2-titles-font-size: 30px;
-$section3-box1-button1-color: #EB476E;  //Box, button and price color
- 
+$section3-box1-button-color: #EB476E;  //Box, button and price color of box 1
+$section3-box2-button-color:#07ACE6;   //Box, button and price color of box 2
+$section3-box3-button-color:#55DFB4;   //Box, button and price color of box 3
 
 /*Mixin*/
 
@@ -63,7 +64,7 @@ $section3-box1-button1-color: #EB476E;  //Box, button and price color
 }
 
 @mixin section-3-box {
-  margin: 0 auto;
+  margin: 0 auto 54px;
   width: 293px;
   height: 251px;
   background: #ffffff;
@@ -440,7 +441,7 @@ nav {
 
 .basic-box {
   @include section-3-box;
-  border: 1px solid $section3-box1-button1-color;
+  border: 1px solid $section3-box1-button-color;
 }
 
 .basic-subtitle {
@@ -451,12 +452,24 @@ nav {
 
 .basic-box:hover {
   transform: scale(1.05);
-  box-shadow: 5px 10px 27px rgba($section3-box1-button1-color, 0.29);
+  box-shadow: 5px 10px 27px rgba($section3-box1-button-color, 0.29);
 }
 
 .basic-price {
   @include section-3-prices;
-  color: $section3-box1-button1-color;
+  color: $section3-box1-button-color;
+}
+
+.basic-submit {
+  @include section-3-buttons;
+  background: $section3-box1-button-color;
+  top: -129px;
+  left: 71.5px;
+}
+.basic-submit:hover {
+  background-color: white;
+  color: $section3-box1-button-color;
+  border: 1px solid $section3-box1-button-color;
 }
 
 .item-list {
@@ -508,14 +521,36 @@ nav {
   background-image: url("../images/Check-not.png");
 }
 
-.basic-submit {
+.professional-box {
+  @include section-3-box;
+  border: 1px solid $section3-box2-button-color;
+}
+
+.professional-subtitle {
+  @include section-3-subtitles;
+  margin-top: 70px;
+  margin-left: 28px;
+}
+
+.professional-box:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba($section3-box2-button-color, 0.29);
+}
+
+.professional-price {
+  @include section-3-prices;
+  color: $section3-box2-button-color;
+}
+
+.professional-submit {
   @include section-3-buttons;
-  background: $section3-box1-button1-color;
+  background: $section3-box2-button-color;
   top: -129px;
   left: 71.5px;
 }
-.basic-submit:hover {
+.professional-submit:hover {
   background-color: white;
-  color: $section3-box1-button1-color;
-  border: 1px solid $section3-box1-button1-color;
+  color: $section3-box2-button-color;
+  border: 1px solid $section3-box2-button-color;
 }
+

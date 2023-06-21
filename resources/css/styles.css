@@ -373,7 +373,7 @@ nav {
 }
 
 .basic-box {
-  margin: 0 auto;
+  margin: 0 auto 54px;
   width: 293px;
   height: 251px;
   background: #ffffff;
@@ -405,6 +405,24 @@ nav {
   line-height: 64px;
   margin-left: 45px;
   color: #EB476E;
+}
+
+.basic-submit {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  border: none;
+  color: white;
+  background: #EB476E;
+  top: -129px;
+  left: 71.5px;
+}
+
+.basic-submit:hover {
+  background-color: white;
+  color: #EB476E;
+  border: 1px solid #EB476E;
 }
 
 .item-list {
@@ -456,22 +474,57 @@ nav {
   background-image: url("../images/Check-not.png");
 }
 
-.basic-submit {
+.professional-box {
+  margin: 0 auto 54px;
+  width: 293px;
+  height: 251px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #07ACE6;
+}
+
+.professional-subtitle {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #13253b;
+  margin-top: 70px;
+  margin-left: 28px;
+}
+
+.professional-box:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+}
+
+.professional-price {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 64px;
+  margin-left: 45px;
+  color: #07ACE6;
+}
+
+.professional-submit {
   position: relative;
   width: 150px;
   height: 50px;
   border-radius: 23px;
   border: none;
   color: white;
-  background: #EB476E;
+  background: #07ACE6;
   top: -129px;
   left: 71.5px;
 }
 
-.basic-submit:hover {
+.professional-submit:hover {
   background-color: white;
-  color: #EB476E;
-  border: 1px solid #EB476E;
+  color: #07ACE6;
+  border: 1px solid #07ACE6;
 }
 
 /*# sourceMappingURL=styles.css.map */
