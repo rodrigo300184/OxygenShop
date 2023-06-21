@@ -16,9 +16,9 @@ $descriptions-color: #a5a5a5;
 $desriptions-font-size: 17px;
 $section2-titles-font-color: #000000;
 $section2-titles-font-size: 30px;
-$section3-box1-button-color: #EB476E;  //Box, button and price color of box 1
-$section3-box2-button-color:#07ACE6;   //Box, button and price color of box 2
-$section3-box3-button-color:#55DFB4;   //Box, button and price color of box 3
+$section3-box1-button-color: #eb476e; //Box, button and price color of box 1
+$section3-box2-button-color: #07ace6; //Box, button and price color of box 2
+$section3-box3-button-color: #55dfb4; //Box, button and price color of box 3
 
 /*Mixin*/
 
@@ -77,7 +77,6 @@ $section3-box3-button-color:#55DFB4;   //Box, button and price color of box 3
   font-weight: 300;
   font-size: 46px;
   line-height: 64px;
-  margin-left: 45px;
 }
 
 @mixin section-3-subtitles {
@@ -96,6 +95,16 @@ $section3-box3-button-color:#55DFB4;   //Box, button and price color of box 3
   border-radius: 23px;
   border: none;
   color: white;
+}
+
+@mixin limited-offer-text{
+  position: relative;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #13253b;
 }
 
 /*CSS*/
@@ -457,6 +466,7 @@ nav {
 
 .basic-price {
   @include section-3-prices;
+  margin-left: 45px;
   color: $section3-box1-button-color;
 }
 
@@ -539,6 +549,7 @@ nav {
 
 .professional-price {
   @include section-3-prices;
+  margin-left: 48px;
   color: $section3-box2-button-color;
 }
 
@@ -554,3 +565,48 @@ nav {
   border: 1px solid $section3-box2-button-color;
 }
 
+.professional-offer {
+  @include limited-offer-text;
+  top:-205px;
+  left:50px;
+}
+
+.premium-box {
+  @include section-3-box;
+  border: 1px solid $section3-box3-button-color;
+}
+
+.premium-subtitle {
+  @include section-3-subtitles;
+  margin-top: 70px;
+  margin-left: 31px;
+}
+
+.premium-box:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba($section3-box3-button-color, 0.29);
+}
+
+.premium-price {
+  @include section-3-prices;
+  margin-left: 35px;
+  color: $section3-box3-button-color;
+}
+
+.premium-submit {
+  @include section-3-buttons;
+  background: $section3-box3-button-color;
+  top: -129px;
+  left: 71.5px;
+}
+.premium-submit:hover {
+  background-color: white;
+  color: $section3-box3-button-color;
+  border: 1px solid $section3-box3-button-color;
+}
+
+.premium-offer {
+  @include limited-offer-text;
+  top:-205px;
+  left:36px;
+}
