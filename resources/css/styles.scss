@@ -664,7 +664,7 @@ nav {
   font-size: 16px;
   line-height: 22px;
   color: #a5a5a5;
-  margin: 0 0 17px 65px;
+  margin: 0 0 57px 65px;
 }
 
 .contact-phone::before {
@@ -677,4 +677,40 @@ nav {
   top: 2px;
   left: -32px;
   background-image: url("../images/Phone.png");
+}
+
+.label {
+  position: relative;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 3.28px;
+  color: #08a6e4;
+}
+
+.label-name {
+  left: 30px;
+}
+
+.label-email {
+  top: 68px;
+  left: 30px;
+}
+
+.input {
+  position: relative;
+  width: 312px;
+  left:30px;
+  border:none;
+  border-bottom: 1px solid #95989a;
+}
+
+.input-name{
+  top:26px;
+}
+
+.input-email{
+  top:92px;
 }
