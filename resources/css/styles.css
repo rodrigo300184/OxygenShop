@@ -780,6 +780,7 @@ nav {
   border: none;
   color: white;
   background: #07ace6;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   width: 226px;
   height: 57px;
   margin: 33px 0 44px;
@@ -790,6 +791,61 @@ nav {
   background-color: white;
   color: #07ace6;
   border: 1px solid #07ace6;
+}
+
+footer {
+  position: relative;
+  top: 250px;
+  width: 100%;
+  height: 89px;
+  background: #f7f7f7;
+  box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+}
+
+.footer-title {
+  position: relative;
+  top: 23px;
+  left: 17px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 37px;
+  color: #08a6e4;
+}
+
+.footer-subtitle {
+  position: relative;
+  top: 23px;
+  left: 17px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  color: #a5a5a5;
+}
+
+.twitter {
+  position: absolute;
+  top: 33px;
+  right: 74px;
+  height: 24px;
+  width: 24px;
+  background-image: url("../images/Twitter.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.facebook {
+  position: absolute;
+  top: 33px;
+  right: 30px;
+  height: 24px;
+  width: 24px;
+  background-image: url("../images/Facebook.png");
+  background-size: cover;
+  background-position: center center;
 }
 
 /*# sourceMappingURL=styles.css.map */
