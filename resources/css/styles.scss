@@ -5,7 +5,6 @@ $header-bg-color: #ffffff;
 $header-font-size: 22px;
 $nav-links-color: #a5a5a5;
 $nav-links-color-hover: #000000;
-$nav-icons-bg-color: #07ace6;
 $nav-font-size: 11px;
 $first-circle-color: #fb3b64;
 $second-circle-color: #08a6e4;
@@ -132,15 +131,15 @@ header {
   z-index: 2;
 }
 
-header:hover {
+header:hover {                        
   height: fit-content;
   .navbar {
     display: block;
   }
-  .icon {
+  .icon-1 {
     display: none;
   }
-  .icon-4 {
+  .icon-2 {
     display: block;
   }
 }
@@ -167,26 +166,22 @@ nav {
   .icon {
     position: absolute;
     right: 30px;
-    height: 2px;
-    width: 20px;
-    background: $nav-icons-bg-color;
+    background: none;
   }
   .icon-1 {
     top: 29px;
+    width: 20px;
+    height: 12px;
+    background-image: url("../images/Menu.png");
+    background-size: cover;
   }
   .icon-2 {
-    top: 34px;
-  }
-  .icon-3 {
-    top: 39px;
-  }
-  .icon-4 {
     display: none;
-    background: none;
-    top: 24px;
+    top: 27px;
     width: 15.56px;
     height: 15.56px;
-    transform: rotateX("-45");
+    background-image: url("../images/Cruz.png");
+    background-size: cover;
   }
 }
 
@@ -807,6 +802,7 @@ footer {
 
 .footer-title {
   position: relative;
+  width: fit-content;
   top: 23px;
   left: 17px;
   font-family: "Raleway";
@@ -819,6 +815,7 @@ footer {
 
 .footer-subtitle {
   position: relative;
+  width: fit-content;
   top: 23px;
   left: 17px;
   font-family: "Open Sans";
@@ -849,4 +846,36 @@ footer {
   background-image: url("../images/Facebook.png");
   background-size: cover;
   background-position: center center;
+}
+
+/*----------Big Screens >= 1000px----------*/
+
+@media only screen and (min-width=1000px) {
+  header {
+    display: flex;
+  }
+
+  .navbar {
+    display: flex;
+    margin-top: 6px;
+    padding-top: 26px;
+    margin-bottom: 33.65px;
+    a {
+      margin-top: 14px;
+      margin-left: 25px;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: $nav-font-size;
+      line-height: 1em;
+      text-align: center;
+      letter-spacing: 3.28px;
+      text-transform: uppercase;
+      color: $nav-links-color;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $nav-links-color-hover;
+    }
+  }
 }

@@ -29,10 +29,10 @@ header:hover {
 header:hover .navbar {
   display: block;
 }
-header:hover .icon {
+header:hover .icon-1 {
   display: none;
 }
-header:hover .icon-4 {
+header:hover .icon-2 {
   display: block;
 }
 
@@ -57,26 +57,22 @@ nav {
 .menu_bar .icon {
   position: absolute;
   right: 30px;
-  height: 2px;
-  width: 20px;
-  background: #07ace6;
+  background: none;
 }
 .menu_bar .icon-1 {
   top: 29px;
+  width: 20px;
+  height: 12px;
+  background-image: url("../images/Menu.png");
+  background-size: cover;
 }
 .menu_bar .icon-2 {
-  top: 34px;
-}
-.menu_bar .icon-3 {
-  top: 39px;
-}
-.menu_bar .icon-4 {
   display: none;
-  background: none;
-  top: 24px;
+  top: 27px;
   width: 15.56px;
   height: 15.56px;
-  transform: rotateX("-45");
+  background-image: url("../images/Cruz.png");
+  background-size: cover;
 }
 
 .navbar {
@@ -804,6 +800,7 @@ footer {
 
 .footer-title {
   position: relative;
+  width: fit-content;
   top: 23px;
   left: 17px;
   font-family: "Raleway";
@@ -816,6 +813,7 @@ footer {
 
 .footer-subtitle {
   position: relative;
+  width: fit-content;
   top: 23px;
   left: 17px;
   font-family: "Open Sans";
@@ -846,6 +844,36 @@ footer {
   background-image: url("../images/Facebook.png");
   background-size: cover;
   background-position: center center;
+}
+
+/*----------Big Screens >= 1000px----------*/
+@media only screen and (min-width = 1000px) {
+  header {
+    display: flex;
+  }
+  .navbar {
+    display: flex;
+    margin-top: 6px;
+    padding-top: 26px;
+    margin-bottom: 33.65px;
+  }
+  .navbar a {
+    margin-top: 14px;
+    margin-left: 25px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 1em;
+    text-align: center;
+    letter-spacing: 3.28px;
+    text-transform: uppercase;
+    color: #a5a5a5;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    color: #000000;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
