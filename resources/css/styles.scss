@@ -862,7 +862,7 @@ footer {
     .navbar {
       display: flex;
     }
-    
+
     .icon-2{
       display: none;
     }
@@ -911,7 +911,17 @@ footer {
         color: $nav-links-color-hover;
       }
     }
-
-   
   }
+.flex-container{
+  display: flex;
+  justify-content: center;
+}
+
+  .grid-container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 117px 176px 163px;
+    column-gap: 184px;
+  }
+
 }
