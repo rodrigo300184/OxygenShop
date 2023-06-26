@@ -10,18 +10,18 @@
     <header>
       <nav>
         <div class="menu_bar">
-          <p>OXYGENShop</p>
-          <div class="icon icon-1">
-          </div>
-          <div class="icon icon-2">
+          <p>OXYGEN<span class="p-space"> </span>Shop</p>
+          <div class="menu">
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+            <ul class="navbar">
+              <li><a href="#">WHY US</a></li>
+              <li><a href="#">BENEFITS</a></li>
+              <li><a href="#">PRICES</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
           </div>
         </div>
-        <ul class="navbar">
-          <li><a href="#">WHY US</a></li>
-          <li><a href="#">BENEFITS</a></li>
-          <li><a href="#">PRICES</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
       </nav>
     </header>
     <section class="section-1">
@@ -157,33 +157,26 @@
       <form action="">
         <label class="label label-name" for="name">NAME</label>
         <br />
-        <input
-          class="input input-name"
-          type="text"
-          placeholder="Name Lastname"
-        />
+        <input id="name" name="name" class="input input-name" type="text" placeholder="Name Lastname" autocomplete="name"/>
         <br />
         <label class="label label-email" for="email">EMAIL</label>
         <br />
-        <input
-          class="input input-email"
-          type="text"
-          placeholder="example@email.com"
-        />
-        <br>
-        <label class="data-directive" for="consent"><input type="checkbox"/>
+        <input id="email" name="email" class="input input-email" type="text" placeholder="example@email.com" autocomplete="email"/>
+        <br />
+        <label class="data-directive" for="consent"
+          ><input id="consent" name="consent" type="checkbox" />
           I hereby give consent for my personal data included in my application
           to be processed for the purposes of the recruitment process under the
           European Parliament’s and Council of the European Union Regulation on
           the Protection of Natural Persons as of 27 April 2016, with regard to
           the processing of personal data and on the free movement of such data,
           and repealing Directive 95/46/EC (Data Protection Directive)
-        <span class="checkmark"></span>
-        <button class="form-submit">Send</button>
+          <span class="checkmark"></span>
+          <button class="form-submit">Send</button>
         </label>
       </form>
     </section>
-    
+
     <footer>
       <p class="footer-title">OXYGENShop</p>
       <p class="footer-subtitle">© 2022 OXYGEN, All Rights Reserved</p>
@@ -192,4 +185,3 @@
     </footer>
   </body>
 </html>
-

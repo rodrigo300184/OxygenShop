@@ -123,7 +123,8 @@ body {
 header {
   top: 0;
   position: fixed;
-  height: 70px;
+  height: fit-content;
+  min-height: 70px;
   width: 100%;
   background: $header-bg-color;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.29);
@@ -131,8 +132,7 @@ header {
   z-index: 2;
 }
 
-header:hover {                        
-  height: fit-content;
+.menu:hover {
   .navbar {
     display: block;
   }
@@ -144,15 +144,12 @@ header:hover {
   }
 }
 
-nav {
-  height: fit-content;
-}
-
 .menu_bar {
   width: 100%;
   height: max-content;
 
   p {
+    width: fit-content;
     font-family: "Raleway";
     font-style: normal;
     font-weight: 300;
@@ -161,6 +158,10 @@ nav {
     color: $principal-title-color;
     margin-top: 17px;
     margin-left: 25px;
+
+    span {
+      display: none;
+    }
   }
 
   .icon {
@@ -203,6 +204,7 @@ nav {
     text-transform: uppercase;
     color: $nav-links-color;
     text-decoration: none;
+    border-bottom: 4px solid transparent;
   }
   a:hover {
     color: $nav-links-color-hover;
@@ -850,32 +852,66 @@ footer {
 
 /*----------Big Screens >= 1000px----------*/
 
-@media only screen and (min-width=1000px) {
-  header {
+@media only screen and (min-width: 1000px) {
+  
+  .menu{
+    margin-right: 10px;
+  }
+
+  .menu:hover {
+    .navbar {
+      display: flex;
+    }
+    
+    .icon-2{
+      display: none;
+    }
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .menu_bar {
+    margin-right: 30px;
+    min-height: 70px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin-top: 0;
+      display: inline;
+
+      span {
+        display: inline;
+      }
+    }
   }
 
   .navbar {
     display: flex;
-    margin-top: 6px;
-    padding-top: 26px;
-    margin-bottom: 33.65px;
-    a {
-      margin-top: 14px;
-      margin-left: 25px;
-      font-family: "Open Sans";
-      font-style: normal;
-      font-weight: 700;
-      font-size: $nav-font-size;
-      line-height: 1em;
-      text-align: center;
-      letter-spacing: 3.28px;
-      text-transform: uppercase;
-      color: $nav-links-color;
-      text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li{
+      display: flex;
+      
+      margin-right: 105px;
+      
+      a{
+        padding: 31px 0 24px;
+        height: max-content;
+        margin: 0;
+      }
+      a:hover {
+        transition: all 250ms ease-in;
+        border-bottom: 4px solid $principal-title-color;
+        color: $nav-links-color-hover;
+      }
     }
-    a:hover {
-      color: $nav-links-color-hover;
-    }
+
+   
   }
 }
