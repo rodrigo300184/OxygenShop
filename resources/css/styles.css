@@ -497,8 +497,7 @@ header {
   background-position: center center;
   background-size: cover;
   position: absolute;
-  top: 4px;
-  left: -18px;
+  margin: 4px 0 0 -18px;
   background-image: url("../images/Check-yes.png");
 }
 
@@ -513,8 +512,7 @@ header {
   background-position: center center;
   background-size: cover;
   position: absolute;
-  top: 4px;
-  left: -18px;
+  margin: 4px 0 0 -18px;
   background-image: url("../images/Check-not.png");
 }
 
@@ -1074,6 +1072,72 @@ footer {
   .advantage-3__hr {
     margin: 50px 0 70px 35px;
     border: 2px solid #55dfb4;
+  }
+  /*----------Section 3 Desktop----------*/
+  .box-container {
+    display: flex;
+  }
+  .section-3-title {
+    margin: 127.5px auto 50px;
+  }
+  .basic-box {
+    min-height: 461px;
+  }
+  .basic-subtitle {
+    margin: 34px auto 14px;
+    text-align: center;
+  }
+  .basic-price {
+    margin: 0 0 69px;
+    text-align: center;
+  }
+  .item-list {
+    position: static;
+    display: block;
+    margin: 0 auto;
+    padding-left: 18px;
+    text-align: center;
+  }
+  .basic-submit {
+    top: 35px;
+  }
+  .professional-box {
+    min-height: 461px;
+  }
+  .professional-subtitle {
+    margin: 34px auto 14px;
+    text-align: center;
+  }
+  .professional-offer {
+    text-align: center;
+    left: auto;
+    top: -269px;
+  }
+  .professional-price {
+    margin: 0 0 69px;
+    text-align: center;
+  }
+  .professional-submit {
+    top: 21px;
+  }
+  .premium-box {
+    min-height: 461px;
+  }
+  .premium-subtitle {
+    margin: 34px auto 14px;
+    text-align: center;
+  }
+  .premium-offer {
+    text-align: center;
+    left: auto;
+    top: -269px;
+  }
+  .premium-price {
+    margin: 0 0 69px;
+    text-align: center;
+  }
+  .premium-submit {
+    top: 21px;
   }
 }
 
