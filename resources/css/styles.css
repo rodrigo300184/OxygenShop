@@ -1,6 +1,6 @@
 /*Variables*/
 /*Mixin*/
-/*CSS*/
+/*----------CSS----------*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +9,35 @@
 
 body {
   min-width: 320px;
+}
+
+h1 {
+  color: #000;
+  text-align: center;
+  font-size: 49px;
+  font-family: Raleway;
+  line-height: 57px;
+}
+
+h2 {
+  color: #000;
+  font-size: 36px;
+  font-family: Raleway;
+  line-height: 42px;
+}
+
+h3 {
+  color: #13253b;
+  font-size: 21px;
+  font-family: Raleway;
+  font-weight: 700;
+}
+
+p {
+  color: #000;
+  font-size: 16px;
+  font-family: Open Sans;
+  line-height: 22px;
 }
 
 /*----------header + nav-----------*/
@@ -257,27 +286,27 @@ header {
   padding: 42px 30px;
 }
 
-.advantage-1 {
+.advantages {
   position: relative;
   width: 100%;
   background-color: #ffffff;
-  padding-top: 37.11px;
+  padding-top: 37px;
   margin-bottom: 41px;
   overflow: hidden;
 }
 
-.image-1 {
+.advantage-1__image {
   position: relative;
   margin: 0 auto;
   width: 192.76px;
   height: 109.93px;
 }
-.image-1 img {
+.advantage-1__image img {
   position: relative;
   z-index: 1;
 }
 
-.item-1 {
+.advantage-1__item {
   position: absolute;
   width: 90.12px;
   height: 90.12px;
@@ -288,7 +317,7 @@ header {
   transform: rotate(-45deg);
 }
 
-.section-2-title {
+.advantages__title {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
@@ -296,32 +325,36 @@ header {
   line-height: 35px;
   color: #000000;
   margin: 27px 0 0 22px;
-  height: 72px;
 }
 
-.paragraph-3 {
-  padding: 0 21px 30px 21px;
+.advantages__paragraph {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  /* or 150% */
   color: #000000;
 }
 
-.image-2 {
+.break-line {
+  display: none;
+  width: 327.64px;
+  height: 0px;
+  flex-shrink: 0;
+}
+
+.advantage-2__image {
   position: relative;
   margin: 0 auto;
   width: 175px;
   height: 134.99px;
 }
-.image-2 img {
+.advantage-2__image img {
   position: relative;
   z-index: 1;
 }
 
-.item-2 {
+.advantage-2__item {
   position: absolute;
   margin: 0 auto;
   background-color: #08a6e4;
@@ -898,10 +931,87 @@ footer {
     justify-content: center;
   }
   .grid-container {
-    margin: 0 auto;
+    margin: 103px auto 122px;
     display: grid;
     grid-template-columns: 117px 176px 163px;
     column-gap: 184px;
+  }
+  .advantages {
+    margin: 0 auto 41px;
+    max-width: 1124px;
+  }
+  .advantage-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    min-height: 370px;
+  }
+  .advantage-1__image {
+    margin: 76px 71px 38px 0;
+    text-align: center;
+    align-self: center;
+    width: 50%;
+    height: fit-content;
+  }
+  .advantage-1__image img {
+    width: 386.44px;
+    height: 219px;
+  }
+  .advantage-1__item {
+    width: 180px;
+    height: 180px;
+    left: 55%;
+    top: -44px;
+  }
+  .advantage-1__text {
+    width: 50%;
+  }
+  .advantage-1__title {
+    margin: 50px 0 0 35px;
+  }
+  .advantage-1__paragraph {
+    margin: 30px 0 50px 35px;
+    max-width: 416px;
+  }
+  .break-line {
+    display: block;
+  }
+  .advantage-1__hr {
+    margin-left: 35px;
+    border: 2px solid #fb3b64;
+  }
+  .advantage-2 {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 370px;
+  }
+  .advantage-2__image {
+    margin: 12px 0px 13px 70px;
+    text-align: center;
+    align-self: center;
+    width: 50%;
+    height: fit-content;
+  }
+  .advantage-2__image img {
+    width: 426px;
+    height: 328px;
+  }
+  .advantage-2__item {
+    width: 320px;
+    height: 320px;
+    left: 0px;
+    top: 0px;
+  }
+  .advantage-2__text {
+    width: 50%;
+  }
+  .advantage-2__title {
+    margin: 69px 0 30px 0px;
+  }
+  .advantage-2__paragraph {
+    margin: 0;
+    max-width: 416px;
   }
 }
 
