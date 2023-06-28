@@ -18,7 +18,7 @@ $header-font-size: 22px;
 $nav-links-color: #a5a5a5;
 $nav-links-color-hover: #000000;
 $nav-font-size: 11px;
-$open-shop-button-color:#08a6e4;
+$open-shop-button-color: #08a6e4;
 $first-circle-color: #fb3b64;
 $second-circle-color: #08a6e4;
 $third-circle-color: #55dfb4;
@@ -28,8 +28,8 @@ $descriptions-color: #a5a5a5;
 $desriptions-font-size: 17px;
 $advantages-titles-font-color: #000000;
 $advantages-titles-font-size: 30px;
-$section-2-background-color:#f7f7f7;
-$advantages-background-color:#ffffff;
+$section-2-background-color: #f7f7f7;
+$advantages-background-color: #ffffff;
 $section3-box1-button-color: #eb476e; //Box, button and price color of box 1
 $section3-box2-button-color: #07ace6; //Box, button and price color of box 2
 $section3-box3-button-color: #55dfb4; //Box, button and price color of box 3
@@ -289,7 +289,7 @@ header {
     display: block;
     padding-top: 22px;
     padding-bottom: 23px;
-    font-size: 16px; 
+    font-size: 16px;
     line-height: 22px;
     text-align: center;
     color: #ffffff;
@@ -940,7 +940,7 @@ footer {
   }
   .paragraph-2--text {
     font-size: $title-font-size;
-    font-weight:normal;
+    font-weight: normal;
     line-height: 42px;
     text-align: center;
   }
@@ -996,7 +996,7 @@ footer {
 
   .advantage-1__title {
     font-size: $title-font-size;
-    line-height:42px;
+    line-height: 42px;
     margin: 50px 0 0 35px;
   }
   .advantage-1__paragraph {
@@ -1105,8 +1105,8 @@ footer {
 
   .box-container {
     display: flex;
-    gap:5px;
-    margin:0 180px;
+    gap: 5px;
+    margin: 0 180px;
   }
 
   .section-3-title {
@@ -1114,10 +1114,8 @@ footer {
     margin: 127.5px auto 50px;
   }
 
-  .generic-box{
+  .generic-box {
     min-width: 293px;
-  }
-  .basic-box {
     min-height: 461px;
   }
 
@@ -1141,10 +1139,6 @@ footer {
     top: 35px;
   }
 
-  .professional-box {
-    min-height: 461px;
-  }
-
   .professional-subtitle {
     margin: 34px auto 14px;
     text-align: center;
@@ -1162,9 +1156,6 @@ footer {
 
   .professional-submit {
     top: 21px;
-  }
-  .premium-box {
-    min-height: 461px;
   }
 
   .premium-subtitle {

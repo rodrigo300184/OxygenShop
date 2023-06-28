@@ -1064,8 +1064,6 @@ footer {
   }
   .generic-box {
     min-width: 293px;
-  }
-  .basic-box {
     min-height: 461px;
   }
   .basic-subtitle {
@@ -1086,9 +1084,6 @@ footer {
   .basic-submit {
     top: 35px;
   }
-  .professional-box {
-    min-height: 461px;
-  }
   .professional-subtitle {
     margin: 34px auto 14px;
     text-align: center;
@@ -1104,9 +1099,6 @@ footer {
   }
   .professional-submit {
     top: 21px;
-  }
-  .premium-box {
-    min-height: 461px;
   }
   .premium-subtitle {
     margin: 34px auto 14px;
