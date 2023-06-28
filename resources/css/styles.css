@@ -1055,6 +1055,8 @@ footer {
   /*----------Section 3 Desktop----------*/
   .box-container {
     display: flex;
+    gap: 5px;
+    margin: 0 180px;
   }
   .section-3-title {
     line-height: 42px;
