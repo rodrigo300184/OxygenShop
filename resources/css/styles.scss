@@ -1186,4 +1186,31 @@ footer {
    .premium-submit{
     top: 21px;
   }
+
+  .contact{
+    display: flex;
+    justify-content: center;
+    margin-top: 115px;
+  }
+  .contact-title{
+    margin-top:0;
+    margin-left:0;
+    font-size: 49px;
+  }
+  .contact-subtitle{
+    margin-left:0;
+  }
+  .contact-email{
+    margin-left: 33px;
+  }
+
+  .contact-phone{
+    top:-39px;
+    left: 215px;
+    margin:0;
+  }
+  .contact-form{
+    margin-top: 8px;
+    margin-left: 83px;
+  }
 }
