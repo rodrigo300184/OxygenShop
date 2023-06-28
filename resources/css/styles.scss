@@ -1,4 +1,16 @@
 /*Variables*/
+$heading-font-family: "Raleway";
+$paragraph-font-family: "Open Sans", "Arial";
+$main-title-font-size: 49px;
+$main-title-font-size-mobile: 35px;
+$title-font-size: 36px;
+$title-font-size-mobile: 30px;
+$subtitle-font-size: 21px;
+$paragraph-font-size: 16px;
+$main-title-font-color: #000;
+$title-font-color: #000;
+$subtitle-font-color: #13253b;
+$paragraph-font-color: #000;
 $principal-title-color: #08a6e4;
 $principal-tittle-font-size: 32px;
 $header-bg-color: #ffffff;
@@ -6,6 +18,7 @@ $header-font-size: 22px;
 $nav-links-color: #a5a5a5;
 $nav-links-color-hover: #000000;
 $nav-font-size: 11px;
+$open-shop-button-color:#08a6e4;
 $first-circle-color: #fb3b64;
 $second-circle-color: #08a6e4;
 $third-circle-color: #55dfb4;
@@ -15,6 +28,8 @@ $descriptions-color: #a5a5a5;
 $desriptions-font-size: 17px;
 $advantages-titles-font-color: #000000;
 $advantages-titles-font-size: 30px;
+$section-2-background-color:#f7f7f7;
+$advantages-background-color:#ffffff;
 $section3-box1-button-color: #eb476e; //Box, button and price color of box 1
 $section3-box2-button-color: #07ace6; //Box, button and price color of box 2
 $section3-box3-button-color: #55dfb4; //Box, button and price color of box 3
@@ -58,7 +73,7 @@ $section3-box3-button-color: #55dfb4; //Box, button and price color of box 3
   font-style: normal;
   font-weight: 400;
   font-size: $advantages-titles-font-size;
-  line-height: 35px;
+  //line-height: 35px;
   color: $advantages-titles-font-color;
 }
 
@@ -119,32 +134,36 @@ body {
 }
 
 h1 {
-  color: #000;
-  text-align: center;
-  font-size: 49px;
-  font-family: Raleway;
+  color: $main-title-font-color;
+  font-size: $main-title-font-size;
+  font-family: $heading-font-family;
   line-height: 57px;
 }
 
 h2 {
-  color: #000;
-  font-size: 36px;
-  font-family: Raleway;
+  color: $title-font-color;
+  font-size: $title-font-size;
+  font-family: $heading-font-family;
   line-height: 42px;
 }
 
 h3 {
-  color: #13253b;
-  font-size: 21px;
-  font-family: Raleway;
+  color: $subtitle-font-color;
+  font-size: $subtitle-font-size;
+  font-family: $heading-font-family;
   font-weight: 700;
 }
 
 p {
-  color: #000;
-  font-size: 16px;
-  font-family: Open Sans;
+  color: $paragraph-font-color;
+  font-size: $paragraph-font-size;
+  font-family: $paragraph-font-family;
   line-height: 22px;
+}
+a {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
 }
 
 /*----------header + nav-----------*/
@@ -177,9 +196,8 @@ header {
   width: 100%;
   height: max-content;
 
-  p {
+  h2 {
     width: fit-content;
-    font-family: "Raleway";
     font-style: normal;
     font-weight: 300;
     font-size: $principal-tittle-font-size;
@@ -223,9 +241,6 @@ header {
   a {
     margin-top: 14px;
     margin-left: 25px;
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 700;
     font-size: $nav-font-size;
     line-height: 1em;
     text-align: center;
@@ -247,29 +262,24 @@ header {
 }
 .title-1 {
   margin-top: 170px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 41px;
   text-align: center;
-  color: #000000;
+}
+.title-1--text {
+  font-size: $main-title-font-size-mobile;
+  line-height: normal;
 }
 
 .paragraph-1 {
   margin: 20px auto 28px;
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   line-height: 23px;
   text-align: center;
-  color: #000000;
 }
 
 .bt-1 {
   margin: 0 auto;
-  background: #08a6e4;
+  background: $open-shop-button-color;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   border-radius: 40px;
   width: 310px;
@@ -279,10 +289,7 @@ header {
     display: block;
     padding-top: 22px;
     padding-bottom: 23px;
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
+    font-size: 16px; 
     line-height: 22px;
     text-align: center;
     color: #ffffff;
@@ -301,16 +308,14 @@ header {
 
 .paragraph-2 {
   margin: 13px 36px 0 36px;
-  p {
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 35px;
-    text-align: center;
-    color: #000000;
-  }
 }
+.paragraph-2--text {
+  font-size: $title-font-size-mobile;
+  font-weight: 300;
+  line-height: 35px;
+  text-align: center;
+}
+
 .daily-entries,
 .seen-products,
 .added-post {
@@ -363,14 +368,14 @@ header {
 
 .section-2 {
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: $section-2-background-color;
   padding: 42px 30px;
 }
 
 .advantages {
   position: relative;
   width: 100%;
-  background-color: #ffffff;
+  background-color: $advantages-background-color;
   padding-top: 37px;
   margin-bottom: 41px;
   overflow: hidden;
@@ -394,7 +399,7 @@ header {
   height: 90.12px;
   left: 110px;
   top: -21px;
-  background: #fb3b64;
+  background: $first-circle-color;
   border-radius: 41px;
   transform: rotate(-45deg);
 }
@@ -404,12 +409,7 @@ header {
 }
 
 .advantages__paragraph {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  color: #000000;
+  font-size: calc($paragraph-font-size - 2px);
 }
 .advantage-1__paragraph {
   margin: 52px 20px 30px 22px;
@@ -480,15 +480,12 @@ header {
 /*----------Section 3----------*/
 
 .section-3-title {
+  line-height: normal;
   margin-top: 53px;
   margin-bottom: 14px;
   text-align: center;
-  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 42px;
-  color: #000000;
 }
 
 .basic-box {
@@ -554,7 +551,7 @@ header {
   background-position: center center;
   background-size: cover;
   position: absolute;
-  margin:4px 0 0 -18px;
+  margin: 4px 0 0 -18px;
   background-image: url("../images/Check-yes.png");
 }
 
@@ -568,7 +565,7 @@ header {
   background-position: center center;
   background-size: cover;
   position: absolute;
-  margin:4px 0 0 -18px;
+  margin: 4px 0 0 -18px;
   background-image: url("../images/Check-not.png");
 }
 
@@ -655,32 +652,17 @@ header {
 /*----------Contact section----------*/
 
 .contact-title {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
   font-size: 40px;
-  line-height: 47px;
-  color: #000000;
   margin: 77px 0 5px 30px;
 }
 
 .contact-subtitle {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #000000;
   margin-left: 30px;
 }
 
 .contact-email {
   position: relative;
-  font-family: "Open Sans";
-  font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
   color: #a5a5a5;
   margin: 35px 0 17px 65px;
 }
@@ -699,11 +681,7 @@ header {
 
 .contact-phone {
   position: relative;
-  font-family: "Open Sans";
-  font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
   color: #a5a5a5;
   margin: 0 0 57px 65px;
 }
@@ -922,7 +900,7 @@ footer {
     justify-content: space-between;
     align-items: center;
 
-    p {
+    h2 {
       margin-top: 0;
       display: inline;
 
@@ -955,6 +933,17 @@ footer {
       }
     }
   }
+
+  .title-1--text {
+    font-size: $main-title-font-size;
+    line-height: 57px;
+  }
+  .paragraph-2--text {
+    font-size: $title-font-size;
+    font-weight:normal;
+    line-height: 42px;
+    text-align: center;
+  }
   .flex-container {
     display: flex;
     justify-content: center;
@@ -970,6 +959,9 @@ footer {
   .advantages {
     margin: 0 auto 41px;
     max-width: 1124px;
+  }
+  .advantages__paragraph {
+    font-size: $paragraph-font-size;
   }
 
   .advantage-1 {
@@ -1003,6 +995,8 @@ footer {
   }
 
   .advantage-1__title {
+    font-size: $title-font-size;
+    line-height:42px;
     margin: 50px 0 0 35px;
   }
   .advantage-1__paragraph {
@@ -1063,7 +1057,7 @@ footer {
   .advantage-3 {
     padding: 0;
     display: flex;
-    background-color: #f7f7f7;
+    background-color: $section-2-background-color;
     justify-content: space-between;
     min-height: 370px;
     gap: 61px;
@@ -1091,7 +1085,7 @@ footer {
 
   .advantage-3__text {
     max-height: 370px;
-    background-color: #ffffff;
+    background-color: $advantages-background-color;
     width: 100%;
   }
 
@@ -1109,28 +1103,28 @@ footer {
 
   /*----------Section 3 Desktop----------*/
 
-  .box-container{
+  .box-container {
     display: flex;
   }
 
-  
-  .section-3-title{
-    margin: 127.5px auto 50px; 
+  .section-3-title {
+    line-height: 42px;
+    margin: 127.5px auto 50px;
   }
 
-  .basic-box{
+  .basic-box {
     min-height: 461px;
   }
 
-  .basic-subtitle{
-    margin:34px auto 14px;
+  .basic-subtitle {
+    margin: 34px auto 14px;
     text-align: center;
   }
-  .basic-price{
+  .basic-price {
     margin: 0 0 69px;
     text-align: center;
   }
-  .item-list{
+  .item-list {
     position: static;
     display: block;
     margin: 0 auto;
@@ -1138,78 +1132,78 @@ footer {
     text-align: center;
   }
 
-   .basic-submit{
+  .basic-submit {
     top: 35px;
   }
 
-  .professional-box{
+  .professional-box {
     min-height: 461px;
   }
 
-  .professional-subtitle{
-    margin:34px auto 14px;
+  .professional-subtitle {
+    margin: 34px auto 14px;
     text-align: center;
   }
 
-  .professional-offer{
+  .professional-offer {
     text-align: center;
-    left:auto;
+    left: auto;
     top: -269px;
   }
-  .professional-price{
+  .professional-price {
     margin: 0 0 69px;
     text-align: center;
   }
-  
-   .professional-submit{
+
+  .professional-submit {
     top: 21px;
   }
-  .premium-box{
+  .premium-box {
     min-height: 461px;
   }
 
-  .premium-subtitle{
-    margin:34px auto 14px;
+  .premium-subtitle {
+    margin: 34px auto 14px;
     text-align: center;
   }
 
-  .premium-offer{
+  .premium-offer {
     text-align: center;
-    left:auto;
+    left: auto;
     top: -269px;
   }
-  .premium-price{
+  .premium-price {
     margin: 0 0 69px;
     text-align: center;
   }
-  
-   .premium-submit{
+
+  .premium-submit {
     top: 21px;
   }
 
-  .contact{
+  .contact {
     display: flex;
     justify-content: center;
     margin-top: 115px;
   }
-  .contact-title{
-    margin-top:0;
-    margin-left:0;
+  .contact-title {
+    margin-top: 0;
+    margin-left: 0;
     font-size: 49px;
   }
-  .contact-subtitle{
-    margin-left:0;
+  .contact-subtitle {
+    margin-left: 0;
   }
-  .contact-email{
+  .contact-email {
     margin-left: 33px;
   }
 
-  .contact-phone{
-    top:-39px;
+  .contact-phone {
+    top: -39px;
     left: 215px;
-    margin:0;
+    margin: 0;
   }
-  .contact-form{
+  .contact-form {
     margin-top: 8px;
     margin-left: 83px;
   }

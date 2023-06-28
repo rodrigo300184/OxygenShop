@@ -13,31 +13,36 @@ body {
 
 h1 {
   color: #000;
-  text-align: center;
   font-size: 49px;
-  font-family: Raleway;
+  font-family: "Raleway";
   line-height: 57px;
 }
 
 h2 {
   color: #000;
   font-size: 36px;
-  font-family: Raleway;
+  font-family: "Raleway";
   line-height: 42px;
 }
 
 h3 {
   color: #13253b;
   font-size: 21px;
-  font-family: Raleway;
+  font-family: "Raleway";
   font-weight: 700;
 }
 
 p {
   color: #000;
   font-size: 16px;
-  font-family: Open Sans;
+  font-family: "Open Sans", "Arial";
   line-height: 22px;
+}
+
+a {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
 }
 
 /*----------header + nav-----------*/
@@ -67,9 +72,8 @@ header {
   width: 100%;
   height: max-content;
 }
-.menu_bar p {
+.menu_bar h2 {
   width: fit-content;
-  font-family: "Raleway";
   font-style: normal;
   font-weight: 300;
   font-size: 32px;
@@ -78,7 +82,7 @@ header {
   margin-top: 17px;
   margin-left: 25px;
 }
-.menu_bar p span {
+.menu_bar h2 span {
   display: none;
 }
 .menu_bar .icon {
@@ -111,9 +115,6 @@ header {
 .navbar a {
   margin-top: 14px;
   margin-left: 25px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
   font-size: 11px;
   line-height: 1em;
   text-align: center;
@@ -134,24 +135,20 @@ header {
 
 .title-1 {
   margin-top: 170px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 41px;
   text-align: center;
-  color: #000000;
+}
+
+.title-1--text {
+  font-size: 35px;
+  line-height: normal;
 }
 
 .paragraph-1 {
   margin: 20px auto 28px;
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   line-height: 23px;
   text-align: center;
-  color: #000000;
 }
 
 .bt-1 {
@@ -166,9 +163,6 @@ header {
   display: block;
   padding-top: 22px;
   padding-bottom: 23px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
@@ -188,14 +182,12 @@ header {
 .paragraph-2 {
   margin: 13px 36px 0 36px;
 }
-.paragraph-2 p {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 300;
+
+.paragraph-2--text {
   font-size: 30px;
+  font-weight: 300;
   line-height: 35px;
   text-align: center;
-  color: #000000;
 }
 
 .daily-entries,
@@ -322,18 +314,12 @@ header {
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
-  line-height: 35px;
   color: #000000;
   margin: 27px 0 0 22px;
 }
 
 .advantages__paragraph {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 21px;
-  color: #000000;
 }
 
 .advantage-1__paragraph {
@@ -405,15 +391,12 @@ header {
 
 /*----------Section 3----------*/
 .section-3-title {
+  line-height: normal;
   margin-top: 53px;
   margin-bottom: 14px;
   text-align: center;
-  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 42px;
-  color: #000000;
 }
 
 .basic-box {
@@ -648,32 +631,17 @@ header {
 
 /*----------Contact section----------*/
 .contact-title {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
   font-size: 40px;
-  line-height: 47px;
-  color: #000000;
   margin: 77px 0 5px 30px;
 }
 
 .contact-subtitle {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #000000;
   margin-left: 30px;
 }
 
 .contact-email {
   position: relative;
-  font-family: "Open Sans";
-  font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
   color: #a5a5a5;
   margin: 35px 0 17px 65px;
 }
@@ -692,11 +660,7 @@ header {
 
 .contact-phone {
   position: relative;
-  font-family: "Open Sans";
-  font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
   color: #a5a5a5;
   margin: 0 0 57px 65px;
 }
@@ -913,11 +877,11 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
-  .menu_bar p {
+  .menu_bar h2 {
     margin-top: 0;
     display: inline;
   }
-  .menu_bar p span {
+  .menu_bar h2 span {
     display: inline;
   }
   .navbar {
@@ -940,6 +904,16 @@ footer {
     border-bottom: 4px solid #08a6e4;
     color: #000000;
   }
+  .title-1--text {
+    font-size: 49px;
+    line-height: 57px;
+  }
+  .paragraph-2--text {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 42px;
+    text-align: center;
+  }
   .flex-container {
     display: flex;
     justify-content: center;
@@ -953,6 +927,9 @@ footer {
   .advantages {
     margin: 0 auto 41px;
     max-width: 1124px;
+  }
+  .advantages__paragraph {
+    font-size: 16px;
   }
   .advantage-1 {
     display: flex;
@@ -981,6 +958,8 @@ footer {
     width: 50%;
   }
   .advantage-1__title {
+    font-size: 36px;
+    line-height: 42px;
     margin: 50px 0 0 35px;
   }
   .advantage-1__paragraph {
@@ -1078,6 +1057,7 @@ footer {
     display: flex;
   }
   .section-3-title {
+    line-height: 42px;
     margin: 127.5px auto 50px;
   }
   .basic-box {
