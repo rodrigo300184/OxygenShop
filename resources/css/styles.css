@@ -828,12 +828,13 @@ footer {
   width: fit-content;
   top: 23px;
   left: 17px;
-  font-family: "Raleway";
-  font-style: normal;
   font-weight: 300;
   font-size: 32px;
   line-height: 37px;
   color: #08a6e4;
+}
+.footer-title span {
+  display: none;
 }
 
 .footer-subtitle {
@@ -1158,6 +1159,9 @@ footer {
   .contact-form {
     margin-top: 8px;
     margin-left: 83px;
+  }
+  .footer-title span {
+    display: inline;
   }
 }
 
