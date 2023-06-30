@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./resources/images/favicon.ico">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./resources/images/favicon.ico"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,16 +21,18 @@
     <header>
       <nav>
         <div class="menu_bar">
-          <h2>OXYGEN<span class="p-space"> </span>Shop</h2>
-          <input type="checkbox" class="menu">
-            <div class="icon icon-1"></div>
-            <div class="icon icon-2"></div>
-            <ul class="navbar">
-              <li><a href="#why-us">WHY US</a></li>
-              <li><a href="#benefits">BENEFITS</a></li>
-              <li><a href="#pricing">PRICES</a></li>
-              <li><a href="#contact">CONTACT</a></li>
-            </ul>
+          <a href="https://rodrigo300184.github.io/OxygenShop"
+            ><h2>OXYGEN<span class="p-space"> </span>Shop</h2></a
+          >
+          <input type="checkbox" class="menu" />
+          <div class="icon icon-1"></div>
+          <div class="icon icon-2"></div>
+          <ul class="navbar">
+            <li><a href="#why-us">WHY US</a></li>
+            <li><a href="#benefits">BENEFITS</a></li>
+            <li><a href="#pricing">PRICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -42,7 +48,9 @@
       </div>
       <div class="picture-1"></div>
       <div class="paragraph-2">
-        <h2 class="paragraph-2--text">The most popular sales platform in country</h2>
+        <h2 class="paragraph-2--text">
+          The most popular sales platform in country
+        </h2>
       </div>
       <div class="flex-container">
         <div class="grid-container">
@@ -198,6 +206,8 @@
             type="text"
             placeholder="Name Lastname"
             autocomplete="name"
+            onblur="this.placeholder = 'Name Lastname'"
+            onfocus="this.placeholder = ''"
             required
           />
           <br />
@@ -210,6 +220,8 @@
             type="email"
             placeholder="example@email.com"
             autocomplete="email"
+            onblur="this.placeholder = 'example@email.com'"
+            onfocus="this.placeholder = ''"
             required
           />
           <br />
@@ -232,8 +244,12 @@
     <footer>
       <p class="footer-title">OXYGENShop</p>
       <p class="footer-subtitle">© 2022 OXYGEN, All Rights Reserved</p>
-      <a href="http://twitter.com" target="_blank"><div class="twitter"></div></a>
-      <a href="http://facebook.com" target="_blank"><div class="facebook"></div></a>
+      <a href="http://twitter.com" target="_blank"
+        ><div class="twitter"></div
+      ></a>
+      <a href="http://facebook.com" target="_blank"
+        ><div class="facebook"></div
+      ></a>
     </footer>
   </body>
 </html>
