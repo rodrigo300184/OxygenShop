@@ -703,6 +703,7 @@ header {
   left: 30px;
   border: none;
   border-bottom: 1px solid #95989a;
+  outline: none;
 }
 
 .input-name {
