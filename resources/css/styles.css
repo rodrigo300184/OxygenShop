@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-width: 320px;
 }
@@ -419,6 +423,7 @@ header {
   height: 251px;
   background: #ffffff;
   border-radius: 18px;
+  transition: all ease 500ms;
   border: 1px solid #eb476e;
 }
 
@@ -436,6 +441,7 @@ header {
 .basic-box:hover {
   transform: scale(1.05);
   box-shadow: 5px 10px 27px rgba(235, 71, 110, 0.29);
+  transition: all ease 500ms;
 }
 
 .basic-price {
@@ -458,12 +464,14 @@ header {
   background: #eb476e;
   top: -129px;
   left: 71.5px;
+  transition: all ease-in-out 500ms;
 }
 
 .basic-submit:hover {
   background-color: white;
   color: #eb476e;
   border: 1px solid #eb476e;
+  transition: all 500ms;
 }
 
 .item-list {
@@ -519,6 +527,7 @@ header {
   height: 251px;
   background: #ffffff;
   border-radius: 18px;
+  transition: all ease 500ms;
   border: 1px solid #07ace6;
 }
 
@@ -536,6 +545,7 @@ header {
 .professional-box:hover {
   transform: scale(1.05);
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+  transition: all 500ms;
 }
 
 .professional-price {
@@ -558,12 +568,14 @@ header {
   background: #07ace6;
   top: -143px;
   left: 71.5px;
+  transition: all ease-in-out 500ms;
 }
 
 .professional-submit:hover {
   background-color: white;
   color: #07ace6;
   border: 1px solid #07ace6;
+  transition: all 500ms;
 }
 
 .professional-offer {
@@ -584,6 +596,7 @@ header {
   height: 251px;
   background: #ffffff;
   border-radius: 18px;
+  transition: all ease 500ms;
   border: 1px solid #55dfb4;
 }
 
@@ -601,6 +614,7 @@ header {
 .premium-box:hover {
   transform: scale(1.05);
   box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.29);
+  transition: all 500ms;
 }
 
 .premium-price {
@@ -623,9 +637,11 @@ header {
   background: #55dfb4;
   top: -143px;
   left: 71.5px;
+  transition: all ease-in-out 500ms;
 }
 
 .premium-submit:hover {
+  transition: all 500ms;
   background-color: white;
   color: #55dfb4;
   border: 1px solid #55dfb4;
@@ -806,12 +822,14 @@ header {
   height: 57px;
   margin: 33px 0 44px;
   left: 56px;
+  transition: all ease-in-out 500ms;
 }
 
 .form-submit:hover {
   background-color: white;
   color: #07ace6;
   border: 1px solid #07ace6;
+  transition: all ease-in-out 500ms;
 }
 
 footer {
@@ -1082,7 +1100,7 @@ footer {
     margin: 127.5px auto 50px;
   }
   .generic-box {
-    min-width: 293px;
+    min-width: 360px;
     min-height: 461px;
   }
   .basic-subtitle {
@@ -1102,6 +1120,7 @@ footer {
   }
   .basic-submit {
     top: 35px;
+    left: 105px;
   }
   .professional-subtitle {
     margin: 34px auto 14px;
@@ -1118,6 +1137,7 @@ footer {
   }
   .professional-submit {
     top: 21px;
+    left: 105px;
   }
   .premium-subtitle {
     margin: 34px auto 14px;
@@ -1134,6 +1154,7 @@ footer {
   }
   .premium-submit {
     top: 21px;
+    left: 105px;
   }
   .contact {
     display: flex;
