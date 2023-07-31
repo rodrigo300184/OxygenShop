@@ -531,13 +531,13 @@ header {
   background: $section3-box1-button-color;
   top: -129px;
   left: 71.5px;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 .basic-submit:hover {
   background-color: white;
   color: $section3-box1-button-color;
   border: 1px solid $section3-box1-button-color;
-  transition: all 500ms;
+  transition: background 500ms;
 }
 
 .item-list {
@@ -615,13 +615,13 @@ header {
   background: $section3-box2-button-color;
   top: -143px;
   left: 71.5px;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 .professional-submit:hover {
   background-color: white;
   color: $section3-box2-button-color;
   border: 1px solid $section3-box2-button-color;
-  transition: all 500ms;
+  transition: background 500ms;
 }
 
 .professional-offer {
@@ -658,10 +658,10 @@ header {
   background: $section3-box3-button-color;
   top: -143px;
   left: 71.5px;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 .premium-submit:hover {
-  transition: all 500ms;
+  transition: background 500ms;
   background-color: white;
   color: $section3-box3-button-color;
   border: 1px solid $section3-box3-button-color;
@@ -832,14 +832,14 @@ header {
   height: 57px;
   margin: 33px 0 44px;
   left: 56px;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 
 .form-submit:hover {
   background-color: white;
   color: $section3-box2-button-color;
   border: 1px solid $section3-box2-button-color;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 
 footer {

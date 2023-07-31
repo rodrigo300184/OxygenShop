@@ -464,14 +464,14 @@ header {
   background: #eb476e;
   top: -129px;
   left: 71.5px;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 
 .basic-submit:hover {
   background-color: white;
   color: #eb476e;
   border: 1px solid #eb476e;
-  transition: all 500ms;
+  transition: background 500ms;
 }
 
 .item-list {
@@ -568,14 +568,14 @@ header {
   background: #07ace6;
   top: -143px;
   left: 71.5px;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 
 .professional-submit:hover {
   background-color: white;
   color: #07ace6;
   border: 1px solid #07ace6;
-  transition: all 500ms;
+  transition: background 500ms;
 }
 
 .professional-offer {
@@ -637,11 +637,11 @@ header {
   background: #55dfb4;
   top: -143px;
   left: 71.5px;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 
 .premium-submit:hover {
-  transition: all 500ms;
+  transition: background 500ms;
   background-color: white;
   color: #55dfb4;
   border: 1px solid #55dfb4;
@@ -822,14 +822,14 @@ header {
   height: 57px;
   margin: 33px 0 44px;
   left: 56px;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 
 .form-submit:hover {
   background-color: white;
   color: #07ace6;
   border: 1px solid #07ace6;
-  transition: all ease-in-out 500ms;
+  transition: background ease-in-out 500ms;
 }
 
 footer {
