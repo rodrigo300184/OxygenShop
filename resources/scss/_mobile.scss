@@ -1,0 +1,452 @@
+/*----------CSS----------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+h1 {
+  color: $main-title-font-color;
+  font-size: $main-title-font-size;
+  font-family: $heading-font-family;
+  line-height: 57px;
+}
+
+h2 {
+  color: $title-font-color;
+  font-size: $title-font-size;
+  font-family: $heading-font-family;
+  line-height: 42px;
+}
+
+h3 {
+  color: $subtitle-font-color;
+  font-size: $subtitle-font-size;
+  font-family: $heading-font-family;
+  font-weight: 700;
+}
+
+p {
+  color: $paragraph-font-color;
+  font-size: $paragraph-font-size;
+  font-family: $paragraph-font-family;
+  line-height: 22px;
+}
+a {
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+}
+
+/*----------section-1----------*/
+
+.section-1 {
+  padding-bottom: 40px;
+}
+.title-1 {
+  margin-top: 170px;
+  text-align: center;
+}
+.title-1--text {
+  font-size: $main-title-font-size-mobile;
+  line-height: normal;
+}
+
+.paragraph-1 {
+  margin: 20px auto 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: center;
+}
+
+.bt-1 {
+  margin: 0 auto;
+  background: $open-shop-button-color;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 40px;
+  width: 310px;
+  height: 67px;
+
+  a {
+    display: block;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+.picture-1 {
+  margin: 51px auto 0;
+  background-image: url("../images/Background.jpg");
+  height: 267px;
+  max-width: 779px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.paragraph-2 {
+  margin: 13px 36px 0 36px;
+}
+.paragraph-2--text {
+  font-size: $title-font-size-mobile;
+  font-weight: 300;
+  line-height: 35px;
+  text-align: center;
+}
+
+.daily-entries,
+.seen-products,
+.added-post {
+  width: 100%;
+}
+
+.big-numbers {
+  @include big-numbers;
+}
+
+.descriptions {
+  @include descriptions;
+}
+
+.first-circle {
+  @include circle;
+  background-color: $first-circle-color;
+}
+.person-body {
+  position: absolute;
+  left: 30.27px;
+  top: 3px;
+  width: 44px;
+  height: 52px;
+}
+.second-circle {
+  @include circle;
+  background-color: $second-circle-color;
+}
+.eye {
+  position: absolute;
+  left: 23px;
+  top: 14px;
+  width: 65.43px;
+  height: 36.5px;
+}
+.third-circle {
+  @include circle;
+  background-color: $third-circle-color;
+}
+.catalogo {
+  position: absolute;
+  left: 31.34px;
+  top: 6px;
+  width: 52px;
+  height: 48px;
+}
+
+/*----------section-2----------*/
+
+.section-2 {
+  width: 100%;
+  background-color: $section-2-background-color;
+  padding: 42px 30px;
+}
+
+.advantages {
+  position: relative;
+  width: 100%;
+  background-color: $advantages-background-color;
+  padding-top: 37px;
+  margin-bottom: 41px;
+  overflow: hidden;
+}
+
+.advantage-1__image {
+  position: relative;
+  margin: 0 auto;
+  width: 192.76px;
+  height: 109.93px;
+
+  img {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.advantage-1__item {
+  position: absolute;
+  width: 90.12px;
+  height: 90.12px;
+  left: 110px;
+  top: -21px;
+  background: $first-circle-color;
+  border-radius: 41px;
+  transform: rotate(-45deg);
+}
+.advantages__title {
+  @include section2-titles;
+  margin: 27px 0 0 22px;
+}
+
+.advantages__paragraph {
+  font-size: calc($paragraph-font-size - 2px);
+}
+.advantage-1__paragraph {
+  margin: 52px 20px 30px 22px;
+}
+.break-line {
+  display: none;
+  width: 327.64px;
+  height: 0px;
+  flex-shrink: 0;
+}
+
+.advantage-2 {
+  padding: 12px;
+}
+
+.advantage-2__image {
+  position: relative;
+  margin: 0 auto;
+  height: 134.99px;
+}
+
+.advantage-2__item {
+  position: relative;
+  margin: 0 auto;
+  background-color: $second-circle-color;
+  width: 131.8px;
+  height: 131.8px;
+  border-radius: 50%;
+  top: 0;
+
+  img {
+    top: 7px;
+    left: 3px;
+    position: absolute;
+  }
+}
+
+.advantage-2__paragraph {
+  margin: 18px 20px 25px 22px;
+}
+.advantage-3__image {
+  position: relative;
+  margin: 0 auto;
+  width: 314px;
+  height: 195px;
+
+  img {
+    margin: 25px 30px 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.advantage-3__item {
+  position: absolute;
+  margin: 0 auto;
+  background-color: $third-circle-color;
+  border: 1px solid #e8e9ed;
+  border-radius: 5px;
+  width: 314px;
+  height: 195px;
+  top: 0;
+}
+.advantage-3__paragraph {
+  margin: 20px 20px 23px 22px;
+}
+
+/*----------Section 3----------*/
+
+.section-3-title {
+  line-height: normal;
+  margin-top: 53px;
+  margin-bottom: 14px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.basic-box {
+  @include section-3-box;
+  border: 1px solid $section3-box1-button-color;
+}
+
+.basic-subtitle {
+  @include section-3-subtitles;
+  margin-top: 70px;
+  margin-left: 50px;
+}
+
+.basic-box:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba($section3-box1-button-color, 0.29);
+  transition: all ease 500ms;
+}
+
+.basic-price {
+  @include section-3-prices;
+  margin-left: 45px;
+  color: $section3-box1-button-color;
+}
+
+.basic-submit {
+  @include section-3-buttons;
+  background: $section3-box1-button-color;
+  top: -129px;
+  left: 71.5px;
+  transition: background ease-in-out 500ms;
+}
+.basic-submit:hover {
+  background-color: white;
+  color: $section3-box1-button-color;
+  border: 1px solid $section3-box1-button-color;
+  transition: background 500ms;
+}
+
+.item-list {
+  position: relative;
+  list-style: none;
+  top: -133px;
+  left: 168px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  width: 150px;
+  color: #000000;
+
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+.check-yes {
+  position: relative;
+}
+
+.check-yes::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  margin: 4px 0 0 -18px;
+  background-image: url("../images/Check-yes.png");
+}
+
+.check-not {
+  position: relative;
+}
+.check-not::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  margin: 4px 0 0 -18px;
+  background-image: url("../images/Check-not.png");
+}
+
+.professional-box {
+  @include section-3-box;
+  border: 1px solid $section3-box2-button-color;
+}
+
+.professional-subtitle {
+  @include section-3-subtitles;
+  margin-top: 70px;
+  margin-left: 28px;
+}
+
+.professional-box:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba($section3-box2-button-color, 0.29);
+  transition: all 500ms;
+}
+
+.professional-price {
+  @include section-3-prices;
+  margin-left: 48px;
+  color: $section3-box2-button-color;
+}
+
+.professional-submit {
+  @include section-3-buttons;
+  background: $section3-box2-button-color;
+  top: -143px;
+  left: 71.5px;
+  transition: background ease-in-out 500ms;
+}
+.professional-submit:hover {
+  background-color: white;
+  color: $section3-box2-button-color;
+  border: 1px solid $section3-box2-button-color;
+  transition: background 500ms;
+}
+
+.professional-offer {
+  @include limited-offer-text;
+  top: -205px;
+  left: 51px;
+}
+
+.premium-box {
+  @include section-3-box;
+  border: 1px solid $section3-box3-button-color;
+}
+
+.premium-subtitle {
+  @include section-3-subtitles;
+  margin-top: 70px;
+  margin-left: 31px;
+}
+
+.premium-box:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba($section3-box3-button-color, 0.29);
+  transition: all 500ms;
+}
+
+.premium-price {
+  @include section-3-prices;
+  margin-left: 35px;
+  color: $section3-box3-button-color;
+}
+
+.premium-submit {
+  @include section-3-buttons;
+  background: $section3-box3-button-color;
+  top: -143px;
+  left: 71.5px;
+  transition: background ease-in-out 500ms;
+}
+.premium-submit:hover {
+  transition: background 500ms;
+  background-color: white;
+  color: $section3-box3-button-color;
+  border: 1px solid $section3-box3-button-color;
+}
+
+.premium-offer {
+  @include limited-offer-text;
+  top: -205px;
+  left: 37px;
+}

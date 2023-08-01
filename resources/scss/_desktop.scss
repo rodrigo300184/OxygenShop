@@ -1,0 +1,342 @@
+/*----------Big Screens >= 1000px----------*/
+
+@media only screen and (min-width: 1000px) {
+    .menu {
+      display: none;
+    }
+  
+    .menu[type="checkbox"]:checked ~ .navbar {
+      display: flex;
+    }
+    .menu[type="checkbox"]:checked ~ .icon {
+      display: none;
+    }
+  
+    .navbar {
+      display: flex;
+    }
+  
+    .icon {
+      display: none;
+    }
+  
+    .menu_bar {
+      margin-right: 30px;
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      h2 {
+        margin-top: 0;
+        display: inline;
+  
+        span {
+          display: inline;
+        }
+      }
+    }
+  
+    .navbar {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        display: flex;
+  
+        margin-right: 105px;
+  
+        a {
+          padding: 31px 0 24px;
+          height: max-content;
+          margin: 0;
+        }
+        a:hover {
+          transition: all 250ms ease-in;
+          border-bottom: 4px solid $principal-title-color;
+          color: $nav-links-color-hover;
+        }
+      }
+    }
+  
+    .title-1--text {
+      font-size: $main-title-font-size;
+      line-height: 57px;
+    }
+    .paragraph-2--text {
+      font-size: $title-font-size;
+      font-weight: normal;
+      line-height: 42px;
+      text-align: center;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .grid-container {
+      margin: 103px auto 122px;
+      display: grid;
+      grid-template-columns: 117px 176px 163px;
+      column-gap: 184px;
+    }
+  
+    .advantages {
+      margin: 0 auto 41px;
+      max-width: 1124px;
+    }
+    .advantages__paragraph {
+      font-size: $paragraph-font-size;
+    }
+  
+    .advantage-1 {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      min-height: 370px;
+    }
+    .advantage-1__image {
+      margin: 76px 71px 38px 0;
+      text-align: center;
+      align-self: center;
+      width: 50%;
+      height: fit-content;
+  
+      img {
+        width: 386.44px;
+        height: 219px;
+      }
+    }
+  
+    .advantage-1__item {
+      width: 180px;
+      height: 180px;
+      left: 55%;
+      top: -44px;
+    }
+  
+    .advantage-1__text {
+      width: 50%;
+    }
+  
+    .advantage-1__title {
+      font-size: $title-font-size;
+      line-height: 42px;
+      margin: 50px 0 0 35px;
+    }
+    .advantage-1__paragraph {
+      margin: 30px 0 50px 35px;
+      max-width: 416px;
+    }
+  
+    .break-line {
+      display: block;
+    }
+  
+    .advantage-1__hr {
+      margin-left: 35px;
+      border: 2px solid $first-circle-color;
+    }
+  
+    .advantage-2 {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      min-height: 370px;
+    }
+    .advantage-2__image {
+      margin: 12px 0px 13px 70px;
+      text-align: center;
+      align-self: center;
+      width: 50%;
+      height: fit-content;
+  
+      img {
+        width: 426px;
+        height: 328px;
+      }
+    }
+  
+    .advantage-2__item {
+      width: 320px;
+      height: 320px;
+      left: 0px;
+      top: 0px;
+    }
+  
+    .advantage-2__text {
+      width: 50%;
+    }
+  
+    .advantage-2__title {
+      margin: 69px 156px 30px 0px;
+    }
+    .advantage-2__paragraph {
+      margin: 0 20px 0 0;
+      max-width: 416px;
+    }
+    .advantage-2__hr {
+      margin-top: 50px;
+      border: 2px solid $second-circle-color;
+    }
+    .advantage-3 {
+      padding: 0;
+      display: flex;
+      background-color: $section-2-background-color;
+      justify-content: space-between;
+      min-height: 370px;
+      gap: 61px;
+    }
+    .advantage-3__image {
+      margin: 0;
+      width: 100%;
+      max-width: 440px;
+  
+      img {
+        left: 62px;
+        top: 98px;
+        margin: 0;
+        width: 265.73px;
+        height: 207.72px;
+      }
+    }
+  
+    .advantage-3__item {
+      width: 100%;
+      height: 370px;
+      left: 0px;
+      top: 0px;
+    }
+  
+    .advantage-3__text {
+      max-height: 370px;
+      background-color: $advantages-background-color;
+      width: 100%;
+    }
+  
+    .advantage-3__title {
+      margin: 69px 239px 30px 35px;
+    }
+    .advantage-3__paragraph {
+      margin: 0 172px 0 35px;
+      max-width: 416px;
+    }
+    .advantage-3__hr {
+      margin: 50px 0 70px 35px;
+      border: 2px solid $third-circle-color;
+    }
+  
+    /*----------Section 3 Desktop----------*/
+  
+    .box-container {
+      display: flex;
+      gap: 5px;
+      margin: 0 180px;
+    }
+  
+    .section-3-title {
+      line-height: 42px;
+      margin: 127.5px auto 50px;
+    }
+  
+    .generic-box {
+      min-width: 360px;
+      min-height: 461px;
+    }
+  
+    .basic-subtitle {
+      margin: 34px auto 14px;
+      text-align: center;
+    }
+    .basic-price {
+      margin: 0 0 69px;
+      text-align: center;
+    }
+    .item-list {
+      position: static;
+      display: block;
+      margin: 0 auto;
+      padding-left: 18px;
+      text-align: center;
+    }
+  
+    .basic-submit {
+      top: 35px;
+      left:105px;
+    }
+  
+    .professional-subtitle {
+      margin: 34px auto 14px;
+      text-align: center;
+    }
+  
+    .professional-offer {
+      text-align: center;
+      left: auto;
+      top: -269px;
+    }
+    .professional-price {
+      margin: 0 0 69px;
+      text-align: center;
+    }
+  
+    .professional-submit {
+      top: 21px;
+      left:105px;
+    }
+  
+    .premium-subtitle {
+      margin: 34px auto 14px;
+      text-align: center;
+    }
+  
+    .premium-offer {
+      text-align: center;
+      left: auto;
+      top: -269px;
+    }
+    .premium-price {
+      margin: 0 0 69px;
+      text-align: center;
+    }
+  
+    .premium-submit {
+      top: 21px;
+      left:105px;
+    }
+  
+    .contact {
+      display: flex;
+      justify-content: center;
+      margin-top: 115px;
+    }
+    .contact-title {
+      margin-top: 0;
+      margin-left: 0;
+      font-size: 49px;
+    }
+    .contact-subtitle {
+      margin-left: 0;
+    }
+    .contact-email {
+      margin-left: 33px;
+    }
+  
+    .contact-phone {
+      top: -39px;
+      left: 215px;
+      margin: 0;
+    }
+    .contact-form {
+      margin-top: 8px;
+      margin-left: 83px;
+    }
+    .footer-title {
+      
+      span {
+        display: inline;
+      }
+    }
+  }

@@ -1,0 +1,88 @@
+/*Mixin*/
+
+@mixin circle {
+    margin: 25px auto 14px;
+    position: relative;
+    width: 62.71px;
+    height: 62.71px;
+    border-radius: 50%;
+  }
+  
+  @mixin big-numbers {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    font-size: $big-numbers-font-size;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    text-align: center;
+    letter-spacing: 5.96px;
+    color: $big-numbers-color;
+  }
+  
+  @mixin descriptions {
+    margin-top: 19.06px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: $desriptions-font-size;
+    line-height: 20px;
+    /* identical to box height, or 118% */
+    text-align: center;
+    color: $descriptions-color;
+  }
+  
+  @mixin section2-titles {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: $advantages-titles-font-size;
+    //line-height: 35px;
+    color: $advantages-titles-font-color;
+  }
+  
+  @mixin section-3-box {
+    margin: 0 auto 54px;
+    width: 293px;
+    height: 251px;
+    background: #ffffff;
+    border-radius: 18px;
+    transition: all ease 500ms;
+  }
+  
+  @mixin section-3-prices {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 46px;
+    line-height: 64px;
+  }
+  
+  @mixin section-3-subtitles {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #13253b;
+  }
+  
+  @mixin section-3-buttons {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    border: none;
+    color: white;
+  }
+  
+  @mixin limited-offer-text {
+    position: relative;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #13253b;
+  }
+  

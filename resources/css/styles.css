@@ -1,6 +1,4 @@
-/*Variables*/
-/*Mixin*/
-/*----------CSS----------*/
+/*Variables*/ /*Mixin*/ /*----------CSS----------*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,102 +46,6 @@ a {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-}
-
-/*----------header + nav-----------*/
-header {
-  top: 0;
-  position: fixed;
-  height: fit-content;
-  min-height: 70px;
-  width: 100%;
-  background: #ffffff;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.29);
-  font-size: 22px;
-  z-index: 2;
-}
-
-.menu {
-  cursor: pointer;
-  position: absolute;
-  right: 30px;
-  top: 29px;
-  z-index: 3;
-  opacity: 0;
-  width: 20px;
-  height: 16px;
-}
-
-.menu[type=checkbox]:checked ~ .navbar {
-  display: block;
-}
-
-.menu[type=checkbox]:checked ~ .icon-2 {
-  display: block;
-}
-
-.menu[type=checkbox]:checked ~ .icon-1 {
-  display: none;
-}
-
-.menu_bar {
-  width: 100%;
-  height: max-content;
-}
-.menu_bar h2 {
-  width: fit-content;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 37px;
-  color: #08a6e4;
-  margin-top: 17px;
-  margin-left: 25px;
-}
-.menu_bar h2 span {
-  display: none;
-}
-.menu_bar .icon {
-  position: absolute;
-  right: 30px;
-  background: none;
-}
-.menu_bar .icon-1 {
-  top: 29px;
-  width: 20px;
-  height: 12px;
-  background-image: url("../images/Menu.png");
-  background-size: cover;
-}
-.menu_bar .icon-2 {
-  display: none;
-  top: 27px;
-  width: 15.56px;
-  height: 15.56px;
-  background-image: url("../images/Cruz.png");
-  background-size: cover;
-}
-
-.navbar {
-  display: none;
-  margin-top: 6px;
-  padding-top: 26px;
-  margin-bottom: 33.65px;
-}
-.navbar a {
-  margin-top: 14px;
-  margin-left: 25px;
-  font-size: 11px;
-  line-height: 1em;
-  text-align: center;
-  letter-spacing: 3.28px;
-  text-transform: uppercase;
-  color: #a5a5a5;
-  text-decoration: none;
-  border-bottom: 4px solid transparent;
-}
-.navbar a:hover {
-  color: #000000;
 }
 
 /*----------section-1----------*/
@@ -657,6 +559,102 @@ header {
   color: #13253b;
   top: -205px;
   left: 37px;
+}
+
+/*----------header + nav-----------*/
+header {
+  top: 0;
+  position: fixed;
+  height: fit-content;
+  min-height: 70px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.29);
+  font-size: 22px;
+  z-index: 2;
+}
+
+.menu {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 29px;
+  z-index: 3;
+  opacity: 0;
+  width: 20px;
+  height: 16px;
+}
+
+.menu[type=checkbox]:checked ~ .navbar {
+  display: block;
+}
+
+.menu[type=checkbox]:checked ~ .icon-2 {
+  display: block;
+}
+
+.menu[type=checkbox]:checked ~ .icon-1 {
+  display: none;
+}
+
+.menu_bar {
+  width: 100%;
+  height: max-content;
+}
+.menu_bar h2 {
+  width: fit-content;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 37px;
+  color: #08a6e4;
+  margin-top: 17px;
+  margin-left: 25px;
+}
+.menu_bar h2 span {
+  display: none;
+}
+.menu_bar .icon {
+  position: absolute;
+  right: 30px;
+  background: none;
+}
+.menu_bar .icon-1 {
+  top: 29px;
+  width: 20px;
+  height: 12px;
+  background-image: url("../images/Menu.png");
+  background-size: cover;
+}
+.menu_bar .icon-2 {
+  display: none;
+  top: 27px;
+  width: 15.56px;
+  height: 15.56px;
+  background-image: url("../images/Cruz.png");
+  background-size: cover;
+}
+
+.navbar {
+  display: none;
+  margin-top: 6px;
+  padding-top: 26px;
+  margin-bottom: 33.65px;
+}
+.navbar a {
+  margin-top: 14px;
+  margin-left: 25px;
+  font-size: 11px;
+  line-height: 1em;
+  text-align: center;
+  letter-spacing: 3.28px;
+  text-transform: uppercase;
+  color: #a5a5a5;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+.navbar a:hover {
+  color: #000000;
 }
 
 /*----------Contact section----------*/

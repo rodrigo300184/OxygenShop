@@ -1,0 +1,98 @@
+/*----------header + nav-----------*/
+
+header {
+    top: 0;
+    position: fixed;
+    height: fit-content;
+    min-height: 70px;
+    width: 100%;
+    background: $header-bg-color;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.29);
+    font-size: $header-font-size;
+    z-index: 2;
+  }
+  
+  .menu {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 29px;
+    z-index: 3;
+    opacity: 0;
+    width: 20px;
+    height: 16px;
+  }
+  
+  .menu[type="checkbox"]:checked ~ .navbar {
+    display: block;
+  }
+  .menu[type="checkbox"]:checked ~ .icon-2 {
+    display: block;
+  }
+  .menu[type="checkbox"]:checked ~ .icon-1 {
+    display: none;
+  }
+  
+  .menu_bar {
+    width: 100%;
+    height: max-content;
+  
+    h2 {
+      width: fit-content;
+      font-style: normal;
+      font-weight: 300;
+      font-size: $principal-tittle-font-size;
+      line-height: 37px;
+      color: $principal-title-color;
+      margin-top: 17px;
+      margin-left: 25px;
+  
+      span {
+        display: none;
+      }
+    }
+  
+    .icon {
+      position: absolute;
+      right: 30px;
+      background: none;
+    }
+    .icon-1 {
+      top: 29px;
+      width: 20px;
+      height: 12px;
+      background-image: url("../images/Menu.png");
+      background-size: cover;
+    }
+    .icon-2 {
+      display: none;
+      top: 27px;
+      width: 15.56px;
+      height: 15.56px;
+      background-image: url("../images/Cruz.png");
+      background-size: cover;
+    }
+  }
+  
+  .navbar {
+    display: none;
+    margin-top: 6px;
+    padding-top: 26px;
+    margin-bottom: 33.65px;
+    a {
+      margin-top: 14px;
+      margin-left: 25px;
+      font-size: $nav-font-size;
+      line-height: 1em;
+      text-align: center;
+      letter-spacing: 3.28px;
+      text-transform: uppercase;
+      color: $nav-links-color;
+      text-decoration: none;
+      border-bottom: 4px solid transparent;
+    }
+    a:hover {
+      color: $nav-links-color-hover;
+    }
+  }
+  
