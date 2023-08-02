@@ -488,6 +488,7 @@ a {
   font-size: 12px;
   line-height: 14px;
   color: #13253b;
+  width: fit-content;
   top: -205px;
   left: 51px;
 }
@@ -557,6 +558,7 @@ a {
   font-size: 12px;
   line-height: 14px;
   color: #13253b;
+  width: fit-content;
   top: -205px;
   left: 37px;
 }
@@ -1128,6 +1130,7 @@ footer {
     text-align: center;
     left: auto;
     top: -269px;
+    width: 100%;
   }
   .professional-price {
     margin: 0 0 69px;
@@ -1145,6 +1148,7 @@ footer {
     text-align: center;
     left: auto;
     top: -269px;
+    width: 100%;
   }
   .premium-price {
     margin: 0 0 69px;
