@@ -1,16 +1,6 @@
 /*----------Big Screens >= 1000px----------*/
 
 @media only screen and (min-width: 1000px) {
-    .menu {
-      display: none;
-    }
-  
-    .menu[type="checkbox"]:checked ~ .navbar {
-      display: flex;
-    }
-    .menu[type="checkbox"]:checked ~ .icon {
-      display: none;
-    }
   
     .navbar {
       display: flex;
