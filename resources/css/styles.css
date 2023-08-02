@@ -576,32 +576,13 @@ header {
   z-index: 2;
 }
 
-.menu {
-  cursor: pointer;
-  position: absolute;
-  right: 30px;
-  top: 29px;
-  z-index: 3;
-  opacity: 0;
-  width: 20px;
-  height: 16px;
-}
-
-.menu[type=checkbox]:checked ~ .navbar {
-  display: block;
-}
-
-.menu[type=checkbox]:checked ~ .icon-2 {
-  display: block;
-}
-
-.menu[type=checkbox]:checked ~ .icon-1 {
-  display: none;
-}
-
 .menu_bar {
   width: 100%;
   height: max-content;
+}
+.menu_bar a {
+  display: block;
+  width: fit-content;
 }
 .menu_bar h2 {
   width: fit-content;

@@ -1,8 +1,6 @@
 const icon_1 = document.getElementById("icon-1");
 const icon_2 = document.getElementById("icon-2");
 const navbar = document.getElementById("navbar");
-
-if(window.innerWidth<1000){
     
   icon_1.addEventListener("click", dropdown_menu_open);
 
@@ -19,5 +17,14 @@ if(window.innerWidth<1000){
     navbar.style.display = "none";
   }
 
-  window.addEventListener('resize',dropdown_menu_close);
-}
+  window.addEventListener('resize',dropdown_menu_ajust);
+
+  function dropdown_menu_ajust(){
+    if(window.innerWidth<1000){
+      dropdown_menu_close();
+    }else{
+      icon_1.style.display = "none";
+      icon_2.style.display = "none";
+      navbar.style.display = "flex";
+    }
+  }
