@@ -28,3 +28,9 @@ const navbar = document.getElementById("navbar");
       navbar.style.display = "flex";
     }
   }
+
+  window.addEventListener('scroll',progressBar)
+
+  function progressBar(){
+    document.getElementById('progress-bar').style.width = `${(window.scrollY/(document.body.scrollHeight-innerHeight))*100}%`;
+  }

@@ -640,6 +640,15 @@ header {
   color: #000000;
 }
 
+#progress-bar {
+  position: fixed;
+  top: 70px;
+  width: 0%;
+  height: 5px;
+  background-color: #08a6e4;
+  z-index: 3;
+}
+
 /*----------Contact section----------*/
 .contact-title {
   font-size: 40px;
