@@ -80,3 +80,11 @@ header {
     }
   }
   
+  #progress-bar{
+    position: fixed;
+    top: 70px;
+    width: 0%;
+    height: 5px;
+    background-color: $progress-bar-color;
+    z-index: 3;
+  }
