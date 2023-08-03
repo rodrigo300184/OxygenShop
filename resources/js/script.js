@@ -1,3 +1,4 @@
+/*----------Burger Menu----------*/
 const icon_1 = document.getElementById("icon-1");
 const icon_2 = document.getElementById("icon-2");
 const navbar = document.getElementById("navbar");
@@ -29,8 +30,18 @@ const navbar = document.getElementById("navbar");
     }
   }
 
+  /*----------Progress Bar----------*/
+  
   window.addEventListener('scroll',progressBar)
 
   function progressBar(){
     document.getElementById('progress-bar').style.width = `${(window.scrollY/(document.body.scrollHeight-innerHeight))*100}%`;
   }
+
+  /*----------Go Up Bottom----------*/
+
+  const goUpBtn = document.getElementById("return-btn");
+  goUpBtn.onmouseover = () => {
+    goUpBtn.style.bo
+  }
+  goUpBtn.onclick = () => window.scrollTo(0,0);

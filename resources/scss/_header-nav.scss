@@ -80,6 +80,22 @@ header {
     }
   }
   
+  #return-btn{
+    @include return-btn-text;
+    @include circle; 
+    position: fixed;
+    bottom:25px;
+    right: 50px;
+    background-color:$third-circle-color;
+    transition: transform 300ms;
+  }
+  #return-btn:hover {
+    text-shadow: 0 0 2px black;
+    transform: scale(1.25);
+    box-shadow: 0px 0px 35px 10px rgba($section3-box3-button-color, 0.9);
+    transition: all 500ms;
+    
+  }
   #progress-bar{
     position: fixed;
     top: 70px;
