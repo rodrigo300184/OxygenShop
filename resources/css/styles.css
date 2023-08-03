@@ -640,6 +640,33 @@ header {
   color: #000000;
 }
 
+#return-btn {
+  padding-top: 18px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  margin: 25px auto 14px;
+  position: relative;
+  width: 62.71px;
+  height: 62.71px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 50px;
+  background-color: #55dfb4;
+  transition: transform 300ms;
+}
+
+#return-btn:hover {
+  text-shadow: 0 0 2px black;
+  transform: scale(1.25);
+  box-shadow: 0px 0px 35px 10px rgba(85, 223, 180, 0.9);
+  transition: all 500ms;
+}
+
 #progress-bar {
   position: fixed;
   top: 70px;
