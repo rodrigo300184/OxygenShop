@@ -120,7 +120,7 @@ messages.onclick = () => {messages.classList.remove('messages','fail');
 }
 async function jsonplaceholder(name, email) {
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/post", {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
       body: JSON.stringify({
         name: name,
