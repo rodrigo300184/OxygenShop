@@ -655,7 +655,7 @@ header {
   border-radius: 50%;
   transform: scale(0.75);
   position: fixed;
-  bottom: 50px;
+  bottom: 35px;
   right: 33px;
   background-color: #55dfb4;
   transition: transform 300ms;
@@ -677,6 +677,7 @@ header {
   z-index: 3;
 }
 
+/*----------Big Screens >= 1000px----------*/
 @media only screen and (min-width: 1000px) {
   .navbar {
     display: flex;
@@ -935,7 +936,7 @@ header {
   justify-content: center;
   color: white;
   background-color: #55dfb4;
-  top: 210px;
+  top: 215px;
   left: 32px;
   border-radius: 20px;
   padding-right: 19px;
