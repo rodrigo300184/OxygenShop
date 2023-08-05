@@ -82,7 +82,8 @@ header {
   
   #return-btn{
     @include return-btn-text;
-    @include circle; 
+    @include circle;
+    transform: scale(0.75); 
     position: fixed;
     bottom:50px;
     right: 33px;
@@ -91,7 +92,7 @@ header {
   }
   #return-btn:hover {
     text-shadow: 0 0 2px black;
-    transform: scale(1.25);
+    transform: scale(1.00);
     box-shadow: 0px 0px 35px 10px rgba($section3-box3-button-color, 0.9);
     transition: all 500ms;
     
@@ -154,5 +155,22 @@ header {
           color: $nav-links-color-hover;
         }
       }
+    }
+    #return-btn{
+      @include return-btn-text;
+      @include circle; 
+      transform: scale(1.00);
+      position: fixed;
+      bottom:50px;
+      right: 33px;
+      background-color:$third-circle-color;
+      transition: transform 300ms;
+    }
+    #return-btn:hover {
+      text-shadow: 0 0 2px black;
+      transform: scale(1.25);
+      box-shadow: 0px 0px 35px 10px rgba($section3-box3-button-color, 0.9);
+      transition: all 500ms;
+      
     }
   }
