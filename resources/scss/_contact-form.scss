@@ -182,9 +182,10 @@
   width: 312px;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
   color: white;
   background-color: $third-circle-color;
-  top: 215px;
+  top: 220px;
   left: 32px;
   border-radius: 20px;
   padding-right: 19px;
@@ -235,5 +236,8 @@
   .contact-form {
     margin-top: 8px;
     margin-left: 83px;
+  }
+  .messages {
+    font-size: 16px;
   }
 }
