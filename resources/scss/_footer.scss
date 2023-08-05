@@ -56,3 +56,14 @@ footer {
     background-size: cover;
     background-position: center center;
   }
+
+  /*----------Big Screens >= 1000px----------*/
+
+@media only screen and (min-width: 1000px) {
+  .footer-title {
+      
+    span {
+      display: inline;
+    }
+  }
+}

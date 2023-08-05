@@ -84,8 +84,8 @@ header {
     @include return-btn-text;
     @include circle; 
     position: fixed;
-    bottom:25px;
-    right: 50px;
+    bottom:50px;
+    right: 33px;
     background-color:$third-circle-color;
     transition: transform 300ms;
   }
@@ -103,4 +103,56 @@ header {
     height: 5px;
     background-color: $progress-bar-color;
     z-index: 3;
+  }
+
+  @media only screen and (min-width: 1000px) {
+  
+    .navbar {
+      display: flex;
+    }
+  
+    .icon {
+      display: none;
+    }
+  
+    .menu_bar {
+      margin-right: 30px;
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      h2 {
+        margin-top: 0;
+        display: inline;
+  
+        span {
+          display: inline;
+        }
+      }
+    }
+  
+    .navbar {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        display: flex;
+  
+        margin-right: 105px;
+  
+        a {
+          padding: 31px 0 24px;
+          height: max-content;
+          margin: 0;
+        }
+        a:hover {
+          transition: all 250ms ease-in;
+          border-bottom: 4px solid $principal-title-color;
+          color: $nav-links-color-hover;
+        }
+      }
+    }
   }

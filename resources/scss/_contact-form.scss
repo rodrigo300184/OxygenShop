@@ -1,170 +1,239 @@
 /*----------Contact section----------*/
 
 .contact-title {
-    font-size: 40px;
-    margin: 77px 0 5px 30px;
+  font-size: 40px;
+  margin: 77px 0 5px 30px;
+}
+
+.contact-subtitle {
+  margin-left: 30px;
+}
+
+.contact-email {
+  position: relative;
+  font-weight: 600;
+  color: #a5a5a5;
+  margin: 35px 0 17px 65px;
+}
+
+.contact-email::before {
+  content: "";
+  height: 18px;
+  width: 22px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 2px;
+  left: -32px;
+  background-image: url("../images/Mail.png");
+}
+
+.contact-phone {
+  position: relative;
+  font-weight: 600;
+  color: #a5a5a5;
+  margin: 0 0 57px 65px;
+}
+
+.contact-phone::before {
+  content: "";
+  height: 18px;
+  width: 22px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 2px;
+  left: -32px;
+  background-image: url("../images/Phone.png");
+}
+
+.label {
+  position: relative;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 3.28px;
+  color: #08a6e4;
+}
+
+.label-name {
+  left: 30px;
+}
+
+.label-email {
+  top: 68px;
+  left: 30px;
+}
+
+.input {
+  position: relative;
+  width: 312px;
+  left: 30px;
+  border: none;
+  border-bottom: 1px solid #95989a;
+  outline: none;
+}
+
+.input.invalid {
+  border-bottom: 1px solid red;
+}
+
+.input-name {
+  top: 26px;
+}
+
+.input-email {
+  top: 92px;
+}
+
+.data-directive {
+  position: relative;
+  display: block;
+  top: 123px;
+  left: 26px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #707070;
+  width: 312px;
+  max-height: 144px;
+  padding-left: 35px;
+}
+
+/* Hide the browser's default checkbox */
+.data-directive input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  z-index: 1;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border: 1px solid #95989a;
+  border-radius: 4px;
+}
+
+.checkmark.invalid {
+  border: 1px solid red;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.data-directive input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.data-directive .checkmark:after {
+  left: 8px;
+  top: 2px;
+  width: 5px;
+  height: 15px;
+  border: solid #08a6e4;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form-submit {
+  @include section-3-buttons;
+  background: $section3-box2-button-color;
+  box-shadow: 5px 10px 14px rgba($section3-box2-button-color, 0.29);
+  width: 226px;
+  height: 57px;
+  margin: 33px 0 44px;
+  left: 56px;
+  transition: background ease-in-out 500ms;
+}
+
+.form-submit:hover {
+  background-color: white;
+  color: $section3-box2-button-color;
+  border: 1px solid $section3-box2-button-color;
+  transition: background ease-in-out 500ms;
+}
+
+.messages {
+  display: flex;
+  position: relative;
+  min-height: 40px;
+  width: 312px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: $third-circle-color;
+  top: 210px;
+  left: 32px;
+  border-radius: 20px;
+  padding-right: 19px;
+}
+.messages.fail {
+  background-color: $first-circle-color;
+}
+.messages.fail:after {
+    background-image: url("../images/redX.png");
+}
+
+.messages:after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 11px;
+  left: 280px;
+  background-image: url("../images/greenX.png");
+}
+/*----------Big Screens >= 1000px----------*/
+
+@media only screen and (min-width: 1000px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 115px;
   }
-  
+  .contact-title {
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 49px;
+  }
   .contact-subtitle {
-    margin-left: 30px;
+    margin-left: 0;
   }
-  
   .contact-email {
-    position: relative;
-    font-weight: 600;
-    color: #a5a5a5;
-    margin: 35px 0 17px 65px;
+    margin-left: 33px;
   }
-  
-  .contact-email::before {
-    content: "";
-    height: 18px;
-    width: 22px;
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
-    top: 2px;
-    left: -32px;
-    background-image: url("../images/Mail.png");
-  }
-  
+
   .contact-phone {
-    position: relative;
-    font-weight: 600;
-    color: #a5a5a5;
-    margin: 0 0 57px 65px;
+    top: -39px;
+    left: 215px;
+    margin: 0;
   }
-  
-  .contact-phone::before {
-    content: "";
-    height: 18px;
-    width: 22px;
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
-    top: 2px;
-    left: -32px;
-    background-image: url("../images/Phone.png");
+  .contact-form {
+    margin-top: 8px;
+    margin-left: 83px;
   }
-  
-  .label {
-    position: relative;
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 15px;
-    letter-spacing: 3.28px;
-    color: #08a6e4;
-  }
-  
-  .label-name {
-    left: 30px;
-  }
-  
-  .label-email {
-    top: 68px;
-    left: 30px;
-  }
-  
-  .input {
-    position: relative;
-    width: 312px;
-    left: 30px;
-    border: none;
-    border-bottom: 1px solid #95989a;
-    outline: none;
-  }
-  
-  .input-name {
-    top: 26px;
-  }
-  
-  .input-email {
-    top: 92px;
-  }
-  
-  .data-directive {
-    position: relative;
-    display: block;
-    top: 123px;
-    left: 26px;
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: #707070;
-    width: 312px;
-    max-height: 144px;
-    padding-left: 35px;
-  }
-  
-  /* Hide the browser's default checkbox */
-  .data-directive input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    cursor: pointer;
-    height: 25px;
-    width: 25px;
-    z-index: 1;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #ffffff;
-    border: 1px solid #95989a;
-    border-radius: 4px;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .data-directive input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .data-directive .checkmark:after {
-    left: 8px;
-    top: 2px;
-    width: 5px;
-    height: 15px;
-    border: solid #08a6e4;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  
-  .form-submit {
-    @include section-3-buttons;
-    background: $section3-box2-button-color;
-    box-shadow: 5px 10px 14px rgba($section3-box2-button-color, 0.29);
-    width: 226px;
-    height: 57px;
-    margin: 33px 0 44px;
-    left: 56px;
-    transition: background ease-in-out 500ms;
-  }
-  
-  .form-submit:hover {
-    background-color: white;
-    color: $section3-box2-button-color;
-    border: 1px solid $section3-box2-button-color;
-    transition: background ease-in-out 500ms;
-  }
-  
-  
+}
