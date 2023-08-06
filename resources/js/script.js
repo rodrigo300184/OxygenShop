@@ -46,6 +46,10 @@ const goUpBtn = document.getElementById("return-btn");
 
 goUpBtn.onclick = () => {
   window.setTimeout(() => window.scrollTo(0, 0), 200);
+  if(window.innerWidth<1000){
+    goUpBtn.style.scale = 1.25;
+    setTimeout(()=>goUpBtn.style.scale = "",500);
+  }
 };
 
 /*----------Form Validation----------*/
