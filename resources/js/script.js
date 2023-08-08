@@ -30,6 +30,10 @@ function dropdown_menu_ajust() {
   }
 }
 
+if(window.innerWidth<1000){
+  document.getElementById('navbar').onclick = dropdown_menu_close;
+}
+
 /*----------Progress Bar----------*/
 
 window.addEventListener("scroll", progressBar);
