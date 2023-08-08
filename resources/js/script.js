@@ -46,49 +46,63 @@ const goUpBtn = document.getElementById("return-btn");
 
 goUpBtn.onclick = () => {
   window.setTimeout(() => window.scrollTo(0, 0), 200);
-  if(window.innerWidth<1000){
+  if (window.innerWidth < 1000) {
     goUpBtn.style.scale = 1.25;
-    setTimeout(()=>goUpBtn.style.scale = "",500);
+    setTimeout(() => (goUpBtn.style.scale = ""), 500);
   }
 };
 
-/*----------Form Validation----------*/
+/*----------Contact Form Validation----------*/
 
 const submitBtn = document.getElementById("form-submit");
-const getName = document.getElementById("name");
-const getEmail = document.getElementById("email");
-const getConsent = document.getElementById("consent");
-const checkmark = document.getElementById("checkmark");
-const messages = document.getElementById('messages');
 const email_validate_pattern =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 submitBtn.onclick = (event) => {
   event.preventDefault();
   let validator = true;
-  if (validateName()) {
+  const getName = document.getElementById("name");
+  const getEmail = document.getElementById("email");
+  const getConsent = document.getElementById("consent");
+  const checkmark = document.getElementById("checkmark");
+  const messages = document.getElementById("messages");
+  const nameStr = getName.value;
+  const emailStr = getEmail.value;
+  const checkmarkVal = getConsent.checked;
+  if (validateName(nameStr)) {
     getName.classList.remove("invalid");
   } else {
+    getName.classList.add("invalid");
     validator = false;
   }
-  if (validateEmail()) {
+  if (validateEmail(emailStr)) {
     getEmail.classList.remove("invalid");
   } else {
+    getEmail.classList.add("invalid");
     validator = false;
   }
-  if (validateConsent()) {
+  if (validateConsent(checkmarkVal)) {
     checkmark.classList.remove("invalid");
   } else {
+    checkmark.classList.add("invalid");
     validator = false;
   }
   if (validator) {
-    jsonplaceholder(getName.value, getEmail.value);
+    jsonplaceholder(getName.value, getEmail.value, messages);
   }
+  getName.oninput = () => getName.classList.remove("invalid");
+  getEmail.oninput = () => getEmail.classList.remove("invalid");
+  getConsent.onchange = () => checkmark.classList.remove("invalid");
+  messages.onclick = () => {
+    messages.classList.remove("messages", "fail");
+    messages.innerText = " ";
+  };
 };
 
-function validateName() {
-  if (getName.value.length < 2 || getName.value.length >= 100) {
-    getName.classList.add("invalid");
+/*----------Validation Functions----------*/
+
+function validateName(nameStr) {
+  if (nameStr.length < 2 || nameStr.length >= 100) {
     alert("The name must be between 2 and 100 characters");
     return false;
   } else {
@@ -96,9 +110,8 @@ function validateName() {
   }
 }
 
-function validateEmail() {
-  if (!email_validate_pattern.test(getEmail.value)) {
-    getEmail.classList.add("invalid");
+function validateEmail(emailStr) {
+  if (!email_validate_pattern.test(emailStr)) {
     alert("You must enter a valid email");
     return false;
   } else {
@@ -106,9 +119,8 @@ function validateEmail() {
   }
 }
 
-function validateConsent() {
-  if (!getConsent.checked) {
-    checkmark.classList.add("invalid");
+function validateConsent(checkmarkVal) {
+  if (!checkmarkVal) {
     alert("You must give your consent");
     return false;
   } else {
@@ -116,13 +128,9 @@ function validateConsent() {
   }
 }
 
-getName.oninput = () => getName.classList.remove("invalid");
-getEmail.oninput = () => getEmail.classList.remove("invalid");
-getConsent.onchange = () => checkmark.classList.remove("invalid");
-messages.onclick = () => {messages.classList.remove('messages','fail');
-                         messages.innerText = ' ';
-}
-async function jsonplaceholder(name, email) {
+/*----------Api Json Testing Server  ----------*/
+
+async function jsonplaceholder(name, email, messages) {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
@@ -136,16 +144,97 @@ async function jsonplaceholder(name, email) {
     });
     if (response.ok) {
       const jsonResponse = await response.json();
-      messages.classList.add('messages');
-      messages.innerText = 'Data has been successfully received!';
+      messages.classList.add("messages");
+      messages.innerText = "Data has been successfully received!";
       console.log(jsonResponse);
-    } else{
+    } else {
       throw error;
     }
   } catch (error) {
-    messages.classList.add('messages' ,'fail');
-    messages.innerText = 'Something went wrong!';
-    console.log('mal');
+    messages.classList.add("messages", "fail");
+    messages.innerText = "Something went wrong!";
+    console.log("mal");
     console.log(error);
   }
 }
+
+/*----------Subscribe Form----------*/
+
+const subscribeElement = document.getElementById("subscribe");
+document.body.addEventListener("click", (event) => {
+  if (!subscribeElement.contains(event.target)) {
+    subscribeElement.style.display = "none";
+  }
+});
+
+const closeSubscribe = document.getElementById("close-icon");
+closeSubscribe.onclick = () =>
+  (document.getElementById("subscribe").style.display = "none");
+
+document.body.onkeydown = (event) => {
+  if (event.key === "Escape") {
+    document.getElementById("subscribe").style.display = "none";
+  }
+};
+
+
+
+setTimeout(() => {
+  if (localStorage.getItem("subscribeViewed") === null) {
+    const subscribe = document.getElementById("subscribe");
+    subscribe.style.display = "block";
+    localStorage.setItem("subscribeViewed", true);
+  }
+}, 5000);
+
+window.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("scroll", progressBarSubscribe);
+  function progressBarSubscribe() {
+    let percentage =
+      (window.scrollY / (document.body.scrollHeight - innerHeight)) * 100;
+    if (percentage > 25 && localStorage.getItem("subscribeViewed") === null) {
+      const subscribe = document.getElementById("subscribe");
+      subscribe.style.display = "block";
+      localStorage.setItem("subscribeViewed", true);
+    }
+  }
+  
+});
+
+
+
+/*----------Subscribe Form Validation----------*/
+
+const subscribeBtn = document.getElementById("subscribe-form-submit");
+subscribeBtn.onclick = (event) => {
+  event.preventDefault();
+  let validator = true;
+  const getEmail = document.getElementById("subscribe-email");
+  const getConsent = document.getElementById("subscribe-consent");
+  const checkmark = document.getElementById("subscribe-checkmark");
+  const messages = document.getElementById("subscribe-messages");
+  const emailStr = getEmail.value;
+  const checkmarkVal = getConsent.checked;
+  if (validateEmail(emailStr)) {
+    getEmail.classList.remove("invalid");
+  } else {
+    getEmail.classList.add("invalid");
+    validator = false;
+  }
+  if (validateConsent(checkmarkVal)) {
+    checkmark.classList.remove("invalid");
+  } else {
+    checkmark.classList.add("invalid");
+    validator = false;
+  }
+  if (validator) {
+    jsonplaceholder("", getEmail.value, messages);
+    messages.classList.add("subscribe-position");
+  }
+  getEmail.oninput = () => getEmail.classList.remove("invalid");
+  getConsent.onchange = () => checkmark.classList.remove("invalid");
+  messages.onclick = () => {
+    messages.classList.remove("messages", "fail", "subscribe-position");
+    messages.innerText = " ";
+  };
+};

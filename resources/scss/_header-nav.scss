@@ -100,6 +100,163 @@ header {
     z-index: 3;
   }
 
+  #close-icon{
+    height: 20px;
+    width: 20px;
+    top:5px;
+    left:260px;
+    background-image: url("../images/CloseIcon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .subscribe{
+    display: none;
+    position: absolute;
+    top:80px;
+    right:20px;
+    height: 312px;
+    width:293px;
+    background-color: rgba($third-circle-color,0.6);
+    border: 2px solid $third-circle-color;
+    border-radius: 25px;
+  }
+
+  .subscribe-title{
+    margin:8px auto 0;
+    font-family: $paragraph-font-family;
+    font-size: $suscribe-title-font-size;
+    color: $suscribe-title-font-color;
+    text-align: center;
+  }
+
+  .label-email-subscribe {
+    position: relative;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    color: black;
+    top: 2px;
+    left:25.5px;
+  }
+
+  .input-subscribe {
+    position: relative;
+    width: 238px;
+    left: 25.5px;
+    border: none;
+    border-bottom: 1px solid #95989a;
+    outline: none;
+  }
+
+  .input-subscribe.invalid {
+    border-bottom: 1px solid red;
+  }
+
+  .data-directive-subscribe {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    top: 10px;
+    left: 11.5px;
+    text-align: justify;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #707070;
+    width: 265px;
+    max-height: 144px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .data-directive-subscribe input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    z-index: 1;
+  }
+  
+  /* Create a custom checkbox */
+  .subscribe-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    border: 1px solid #95989a;
+    border-radius: 4px;
+  }
+  
+  .subscribe-checkmark.invalid {
+    border: 1px solid red;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .subscribe-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .data-directive-subscribe input:checked ~ .subscribe-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .data-directive-subscribe .subscribe-checkmark:after {
+    left: 6px;
+    top: 1px;
+    width: 4px;
+    height: 13px;
+    border: solid $third-circle-color;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .subscribe-form-submit {
+    @include section-3-buttons;
+    background: $subscribe-button-color;
+    box-shadow: 5px 10px 14px rgba($subscribe-button-color, 0.29);
+    width: 136px;
+    height: 43px;
+    margin: 17px auto 10px;
+    transition: background ease-in-out 500ms;
+    left:79px;
+  }
+  
+  .subscribe-form-submit:hover {
+    background-color: white;
+    color: $subscribe-button-color;
+    border: 1px solid $subscribe-button-color;
+    transition: background ease-in-out 500ms;
+  }
+  .messages.subscribe-position {
+    top:8px;
+    left: 0;
+    width: 293px;
+  }
+  .messages.subscribe-position:after {
+    left:266px;
+  }
+
+  
+
 /*----------Big Screens >= 1000px----------*/
 
   @media only screen and (min-width: 1000px) {
