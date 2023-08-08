@@ -23,7 +23,8 @@
       <nav>
         <div class="menu_bar">
           <a href="https://rodrigo300184.github.io/OxygenShop"
-            ><h2>OXYGEN<span class="p-space"> </span>Shop</h2></a>
+            ><h2>OXYGEN<span class="p-space"> </span>Shop</h2></a
+          >
           <div id="icon-1" class="icon icon-1"></div>
           <div id="icon-2" class="icon icon-2"></div>
           <ul id="navbar" class="navbar">
@@ -34,40 +35,46 @@
           </ul>
         </div>
       </nav>
-      <div id="subscribe" class="subscribe">
-        <div id="close-icon"></div>
-         <form id="subscribe-form" class="subscribe-form">
-            <p class="subscribe-title">Subscribe to our newsletter!</p>
-            <label class="label-email-subscribe" for="subscribe-email">EMAIL</label>
-            <br />
-            <input
-              id="subscribe-email"
-              name="subscribe-email"
-              class="input-subscribe"
-              placeholder=" example@email.com"
-              autocomplete="email"
-              onblur="this.placeholder = ' example@email.com'"
-              onfocus="this.placeholder = ''"
-            />
-            <br />
-             <label class="data-directive-subscribe" for="subscribe-consent"
-             ><input id="subscribe-consent" name="subscribe-consent" type="checkbox" />
-             I hereby give consent for my personal data included in my
-             application to be processed for the purposes of the recruitment
-             process under the European Parliament’s and Council of the European
-             Union Regulation on the Protection of Natural Persons as of 27 April
-             2016, with regard to the processing of personal data and on the free
-             movement of such data, and repealing Directive 95/46/EC (Data
-             Protection Directive)
-             <span id="subscribe-checkmark" class="subscribe-checkmark"></span>
-           </label>
-           <button id="subscribe-form-submit" class="subscribe-form-submit">Subscribe!</button>
-        </form>
-        <span id="subscribe-messages"></span>
-    </div>
+
       <div id="return-btn">Return to the top</div>
     </header>
     <div id="progress-bar"></div>
+    <div id="subscribe" class="subscribe">
+      <div id="close-icon"></div>
+      <form id="subscribe-form" class="subscribe-form">
+        <p class="subscribe-title">Subscribe to our newsletter!</p>
+        <label class="label-email-subscribe" for="subscribe-email">EMAIL</label>
+        <br />
+        <input
+          id="subscribe-email"
+          name="subscribe-email"
+          class="input-subscribe"
+          placeholder=" example@email.com"
+          autocomplete="email"
+          onblur="this.placeholder = ' example@email.com'"
+          onfocus="this.placeholder = ''"
+        />
+        <br />
+        <label class="data-directive-subscribe" for="subscribe-consent"
+          ><input
+            id="subscribe-consent"
+            name="subscribe-consent"
+            type="checkbox"
+          />
+          I hereby give consent for my personal data included in my application
+          to be processed for the purposes of the recruitment process under the
+          European Parliament’s and Council of the European Union Regulation on
+          the Protection of Natural Persons as of 27 April 2016, with regard to
+          the processing of personal data and on the free movement of such data,
+          and repealing Directive 95/46/EC (Data Protection Directive)
+          <span id="subscribe-checkmark" class="subscribe-checkmark"></span>
+        </label>
+        <button id="subscribe-form-submit" class="subscribe-form-submit">
+          Subscribe!
+        </button>
+      </form>
+      <span id="subscribe-messages"></span>
+    </div>
     <section class="section-1">
       <div class="title-1">
         <h1 class="title-1--text">Sell more!</h1>
@@ -179,6 +186,12 @@
     </section>
     <section id="pricing" class="section-3">
       <h2 class="section-3-title">Pricing</h2>
+      <select name="currencies" id="currencies">
+        <option value="" selected disabled hidden>Currency:</option>
+        <option>EUR</option>
+        <option>USD</option>
+        <option>GBP</option>
+      </select>
       <div class="box-container">
         <div class="generic-box basic-box">
           <p class="basic-subtitle">Basic</p>
@@ -273,8 +286,10 @@
 
     <footer>
       <a href="https://rodrigo300184.github.io/OxygenShop"
-            ><h2 class="footer-title">OXYGEN<span class="p-space"> </span>Shop</h2></a
-          >
+        ><h2 class="footer-title">
+          OXYGEN<span class="p-space"> </span>Shop
+        </h2></a
+      >
       <p class="footer-subtitle">© 2022 OXYGEN, All Rights Reserved</p>
       <a href="http://twitter.com" target="_blank"
         ><div class="twitter"></div

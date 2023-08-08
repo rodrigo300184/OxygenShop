@@ -113,10 +113,10 @@ header {
 
   .subscribe{
     display: none;
-    position: absolute;
+    position: relative;
     top:80px;
-    right:20px;
-    height: 312px;
+    margin: 0 auto;
+    height: 298px;
     width:293px;
     background-color: rgba($third-circle-color,0.6);
     border: 2px solid $third-circle-color;
@@ -247,7 +247,7 @@ header {
     transition: background ease-in-out 500ms;
   }
   .messages.subscribe-position {
-    top:8px;
+    top:12px;
     left: 0;
     width: 293px;
   }
@@ -309,6 +309,15 @@ header {
         }
       }
     }
+
+    .subscribe{
+      display: none;
+      position: absolute;
+      top:80px;
+      right:20px;
+      background-color: rgba($third-circle-color,0.6);
+    }
+
     #return-btn{
       @include return-btn-text;
       @include circle; 
