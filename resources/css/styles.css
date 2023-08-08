@@ -319,6 +319,22 @@ a {
   font-weight: 400;
 }
 
+#currencies {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: fit-content;
+  width: fit-content;
+  top: -25px;
+  border-width: 0 0 1px 0;
+  border-color: rgba(148, 151, 153, 0.5490196078);
+  color: #a5a5a5;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+
 .basic-box {
   margin: 0 auto 54px;
   width: 293px;
@@ -683,10 +699,10 @@ header {
 
 .subscribe {
   display: none;
-  position: absolute;
+  position: relative;
   top: 80px;
-  right: 20px;
-  height: 312px;
+  margin: 0 auto;
+  height: 298px;
   width: 293px;
   background-color: rgba(85, 223, 180, 0.6);
   border: 2px solid #55dfb4;
@@ -823,7 +839,7 @@ header {
 }
 
 .messages.subscribe-position {
-  top: 8px;
+  top: 12px;
   left: 0;
   width: 293px;
 }
@@ -873,6 +889,13 @@ header {
     transition: all 250ms ease-in;
     border-bottom: 4px solid #08a6e4;
     color: #000000;
+  }
+  .subscribe {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: rgba(85, 223, 180, 0.6);
   }
   #return-btn {
     padding-top: 18px;
@@ -1371,7 +1394,7 @@ footer {
   }
   .section-3-title {
     line-height: 42px;
-    margin: 127.5px auto 50px;
+    margin: 127.5px auto 30px;
   }
   .generic-box {
     min-width: 360px;

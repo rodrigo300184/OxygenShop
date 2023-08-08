@@ -281,6 +281,23 @@ a {
   font-weight: 400;
 }
 
+#currencies{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin:0 auto;
+  height: fit-content;
+  width: fit-content;
+  top: -25px;
+  border-width: 0 0 1px 0;
+  border-color: #9497998c;
+  color:$currency-font-color;
+  font-size: $currency-font-size;
+  text-align: center;
+  outline: none;
+
+}
+
 .basic-box {
   @include section-3-box;
   border: 1px solid $section3-box1-button-color;
