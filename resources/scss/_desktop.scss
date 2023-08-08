@@ -170,7 +170,11 @@
     }
   
     /*----------Section 3 Desktop----------*/
-  
+    
+    #currencies{
+      top: -25px;
+    }
+
     .box-container {
       display: flex;
       gap: 5px;

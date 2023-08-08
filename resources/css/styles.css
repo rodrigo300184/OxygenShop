@@ -326,7 +326,7 @@ a {
   margin: 0 auto;
   height: fit-content;
   width: fit-content;
-  top: -25px;
+  top: -12px;
   border-width: 0 0 1px 0;
   border-color: rgba(148, 151, 153, 0.5490196078);
   color: #a5a5a5;
@@ -1387,6 +1387,9 @@ footer {
     border: 2px solid #55dfb4;
   }
   /*----------Section 3 Desktop----------*/
+  #currencies {
+    top: -25px;
+  }
   .box-container {
     display: flex;
     gap: 5px;
