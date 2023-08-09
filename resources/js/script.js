@@ -239,29 +239,26 @@ subscribeBtn.onclick = (event) => {
 };
 
 /*----------Currency Rates API----------*/
-const url1 =
-  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
-const url2 =
-  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json";
-
-let poundRate;
-let euroRate;  
 
 const getRates = async () => {
+  const url1 =
+  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
+  const url2 =
+  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json";
   try {
     const response = await fetch(url1, { method: "GET" });
     if (response.ok) {
       const jsonResponse = await response.json();
       poundRate = jsonResponse.usd['gbp'];
       euroRate = jsonResponse.usd['eur'];
-      return poundRate, euroRate;
+      return {poundRate: poundRate, euroRate: euroRate};
     } else {
         const response2 = await fetch(url2, { method: "GET" });
         if (response2.ok) {
           const jsonResponse = await response2.json();
           poundRate = jsonResponse.usd['gbp'];
           euroRate = jsonResponse.usd['eur'];
-          return poundRate, euroRate;
+          return {poundRate: poundRate, euroRate: euroRate};
         } else{
             throw new Error;
         }
@@ -271,26 +268,26 @@ const getRates = async () => {
   }
 }
 
-getRates();
-
 /*----------Currency Selection----------*/
+
 const basicUSD = Number(document.getElementById("basic-price").innerText.slice(1));
 const professionalUSD = Number(document.getElementById("professional-price").innerText.slice(1));
 const premiumUSD = Number(document.getElementById("premium-price").innerText.slice(1));
 
 const currencySelector = document.getElementById("currencies");
 
-currencySelector.oninput = (event) => {
+currencySelector.oninput = async (event) => {
+  const rates = await getRates();
   switch (event.target.value) {
     case 'GBP':
-      document.getElementById("basic-price").innerText = '£' + Math.round(basicUSD * poundRate);
-      document.getElementById("professional-price").innerText = '£' + Math.round(professionalUSD * poundRate);
-      document.getElementById("premium-price").innerText = '£' + Math.round(premiumUSD * poundRate);
+      document.getElementById("basic-price").innerText = '£' + Math.round(basicUSD * rates.poundRate);
+      document.getElementById("professional-price").innerText = '£' + Math.round(professionalUSD * rates.poundRate);
+      document.getElementById("premium-price").innerText = '£' + Math.round(premiumUSD * rates.poundRate);
       break;
     case 'EUR':
-      document.getElementById("basic-price").innerText = Math.round(basicUSD * euroRate) + '€';
-      document.getElementById("professional-price").innerText = Math.round(professionalUSD * euroRate) + '€';
-      document.getElementById("premium-price").innerText = Math.round(premiumUSD * euroRate) + '€';
+      document.getElementById("basic-price").innerText = Math.round(basicUSD * rates.euroRate) + '€';
+      document.getElementById("professional-price").innerText = Math.round(professionalUSD * rates.euroRate) + '€';
+      document.getElementById("premium-price").innerText = Math.round(premiumUSD * rates.euroRate) + '€';
       break;
     case 'USD':
       document.getElementById("basic-price").innerText = '$' + basicUSD;
