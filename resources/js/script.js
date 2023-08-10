@@ -323,7 +323,7 @@ async function loadImages() {
       .map((match) => match.slice(6, -1));
     filenames.forEach((filename, index) => {
       const image = new Image();
-      image.src = filename;
+      image.src = '.'+filename;
       image.id = index;
       image.onload = () => {
         slider.appendChild(image);
