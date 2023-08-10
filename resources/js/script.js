@@ -30,8 +30,8 @@ function dropdown_menu_ajust() {
   }
 }
 
-if(window.innerWidth<1000){
-  document.getElementById('navbar').onclick = dropdown_menu_close;
+if (window.innerWidth < 1000) {
+  document.getElementById("navbar").onclick = dropdown_menu_close;
 }
 
 /*----------Progress Bar----------*/
@@ -242,62 +242,181 @@ subscribeBtn.onclick = (event) => {
 
 const getRates = async () => {
   const url1 =
-  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
+    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
   const url2 =
-  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json";
+    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json";
   try {
     const response = await fetch(url1, { method: "GET" });
     if (response.ok) {
       const jsonResponse = await response.json();
-      poundRate = jsonResponse.usd['gbp'];
-      euroRate = jsonResponse.usd['eur'];
-      return {poundRate: poundRate, euroRate: euroRate};
+      poundRate = jsonResponse.usd["gbp"];
+      euroRate = jsonResponse.usd["eur"];
+      return { poundRate: poundRate, euroRate: euroRate };
     } else {
-        const response2 = await fetch(url2, { method: "GET" });
-        if (response2.ok) {
-          const jsonResponse = await response2.json();
-          poundRate = jsonResponse.usd['gbp'];
-          euroRate = jsonResponse.usd['eur'];
-          return {poundRate: poundRate, euroRate: euroRate};
-        } else{
-            throw new Error;
-        }
+      const response2 = await fetch(url2, { method: "GET" });
+      if (response2.ok) {
+        const jsonResponse = await response2.json();
+        poundRate = jsonResponse.usd["gbp"];
+        euroRate = jsonResponse.usd["eur"];
+        return { poundRate: poundRate, euroRate: euroRate };
+      } else {
+        throw new Error();
+      }
     }
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 /*----------Currency Selection----------*/
 
-const basicUSD = Number(document.getElementById("basic-price").innerText.slice(1));
-const professionalUSD = Number(document.getElementById("professional-price").innerText.slice(1));
-const premiumUSD = Number(document.getElementById("premium-price").innerText.slice(1));
+const basicUSD = Number(
+  document.getElementById("basic-price").innerText.slice(1)
+);
+const professionalUSD = Number(
+  document.getElementById("professional-price").innerText.slice(1)
+);
+const premiumUSD = Number(
+  document.getElementById("premium-price").innerText.slice(1)
+);
 
 const currencySelector = document.getElementById("currencies");
 
 currencySelector.oninput = async (event) => {
   const rates = await getRates();
   switch (event.target.value) {
-    case 'GBP':
-      document.getElementById("basic-price").innerText = '£' + Math.round(basicUSD * rates.poundRate);
-      document.getElementById("professional-price").innerText = '£' + Math.round(professionalUSD * rates.poundRate);
-      document.getElementById("premium-price").innerText = '£' + Math.round(premiumUSD * rates.poundRate);
+    case "GBP":
+      document.getElementById("basic-price").innerText =
+        "£" + Math.round(basicUSD * rates.poundRate);
+      document.getElementById("professional-price").innerText =
+        "£" + Math.round(professionalUSD * rates.poundRate);
+      document.getElementById("premium-price").innerText =
+        "£" + Math.round(premiumUSD * rates.poundRate);
       break;
-    case 'EUR':
-      document.getElementById("basic-price").innerText = Math.round(basicUSD * rates.euroRate) + '€';
-      document.getElementById("professional-price").innerText = Math.round(professionalUSD * rates.euroRate) + '€';
-      document.getElementById("premium-price").innerText = Math.round(premiumUSD * rates.euroRate) + '€';
+    case "EUR":
+      document.getElementById("basic-price").innerText =
+        Math.round(basicUSD * rates.euroRate) + "€";
+      document.getElementById("professional-price").innerText =
+        Math.round(professionalUSD * rates.euroRate) + "€";
+      document.getElementById("premium-price").innerText =
+        Math.round(premiumUSD * rates.euroRate) + "€";
       break;
-    case 'USD':
-      document.getElementById("basic-price").innerText = '$' + basicUSD;
-      document.getElementById("professional-price").innerText = '$' + professionalUSD;
-      document.getElementById("premium-price").innerText = '$' + premiumUSD;
+    case "USD":
+      document.getElementById("basic-price").innerText = "$" + basicUSD;
+      document.getElementById("professional-price").innerText =
+        "$" + professionalUSD;
+      document.getElementById("premium-price").innerText = "$" + premiumUSD;
   }
 };
 
+/*---------Slider----------*/
 
+const slider = document.getElementById("slider");
+const imageFolder = "./resources/images/slider"; // Image Files Path
 
+async function loadImages() {
+  try {
+    const response = await fetch(imageFolder);
+    const text = await response.text();
+    const filenames = text
+      .match(/href="([^"]+\.(?:jpg|jpeg))"/gi)
+      .map((match) => match.slice(6, -1));
+    filenames.forEach((filename, index) => {
+      const image = new Image();
+      image.src = filename;
+      image.id = index;
+      image.onload = () => {
+        slider.appendChild(image);
+      };
+    });
+  } catch (error) {
+    console.error("Error loading images:", error);
+  }
+}
 
+loadImages();
+
+class Slider {
+  constructor(sliderId) {
+    this.slider = document.querySelector(`#${sliderId}`);
+    this.images = this.slider.querySelectorAll("img");
+    this.currentIndex = 0;
+    this.totalImages = this.images.length;
+    this.dots = null;
+    this.t;
+  }
+
+  startSlider() {
+    const sliderBtns = document.querySelector(".slider-btn-container");
+    this.images.forEach((e, i) => {
+      const btn = document.createElement("BUTTON");
+      btn.classList.add("slider-btn", "dot", `${i}`);
+      sliderBtns.appendChild(btn);
+    });
+    this.dots = document.querySelectorAll(".dot");
+    this.showImg();
+    this.timer();
+  }
+  nextSlide() {
+    this.currentIndex = (this.currentIndex + 1) % this.totalImages;
+    this.showImg();
+  }
+  prevSlide() {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.totalImages) % this.totalImages;
+    this.showImg();
+  }
+  showImg() {
+    for (let i = 0; i < this.images.length; i++) {
+      if (i === this.currentIndex) {
+        this.images[i].classList.add("current"),
+          this.dots[i].classList.add("current");
+      } else {
+        this.images[i].classList.remove("current"),
+          this.dots[i].classList.remove("current");
+      }
+    }
+  }
+  timer() {
+    this.t = setInterval(() => {
+      this.nextSlide();
+    }, 5000);
+  }
+  pause() {
+    return clearInterval(this.t);
+  }
+  matchDot2Img(e) {
+    this.pause();
+    this.images.forEach((ele, i) => {
+      ele.classList.remove("current");
+      this.dots[i].classList.remove("current");
+    });
+    this.images[e].classList.add("current"),
+      this.dots[e].classList.add("current");
+
+    setTimeout(() => {
+      this.timer();
+    }, 1000);
+  }
+}
+
+setTimeout(() => {
+  const sl = new Slider("slider");
+  sl.startSlider();
+  document.addEventListener("click", (e) => {
+    e.target.matches("#arrow-right")
+      ? sl.nextSlide()
+      : e.target.matches("#arrow-left")
+      ? sl.prevSlide()
+      : false;
+    const arr = document.querySelectorAll(".dot");
+    if (e.target.matches(".dot")) {
+      var i = [...arr].indexOf(e.target);
+      sl.matchDot2Img(i);
+    } else {
+      false;
+    }
+  });
+}, 1000);
 
 
