@@ -316,7 +316,7 @@ const imageFolder = "./resources/images/slider/"; // Image Files Path
 
 async function loadImages() {
   try {
-    const response = await fetch(imageFolder);
+    const response = await fetch("./resources/images/slider/");
     const text = await response.text();
     const filenames = text
       .match(/href="([^"]+\.(?:jpg|jpeg))"/gi)
