@@ -312,7 +312,7 @@ currencySelector.oninput = async (event) => {
 /*---------Slider----------*/
 
 const slider = document.getElementById("slider");
-const imageFolder = "../resources/images/slider/"; // Image Files Path
+const imageFolder = "./resources/images/slider/"; // Image Files Path
 
 async function loadImages() {
   try {
