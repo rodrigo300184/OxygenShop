@@ -311,30 +311,30 @@ currencySelector.oninput = async (event) => {
 
 /*---------Slider----------*/
 
-const slider = document.getElementById("slider");
-const imageFolder = "./resources/images/slider"; // Image Files Path
+// const slider = document.getElementById("slider");
+// const imageFolder = "./resources/images/slider"; // Image Files Path
 
-async function loadImages() {
-  try {
-    const response = await fetch(imageFolder);
-    const text = await response.text();
-    const filenames = text
-      .match(/href="([^"]+\.(?:jpg|jpeg))"/gi)
-      .map((match) => match.slice(6, -1));
-    filenames.forEach((filename, index) => {
-      const image = new Image();
-      image.src = filename;
-      image.id = index;
-      image.onload = () => {
-        slider.appendChild(image);
-      };
-    });
-  } catch (error) {
-    console.error("Error loading images:", error);
-  }
-}
+// async function loadImages() {
+//   try {
+//     const response = await fetch(imageFolder);
+//     const text = await response.text();
+//     const filenames = text
+//       .match(/href="([^"]+\.(?:jpg|jpeg))"/gi)
+//       .map((match) => match.slice(6, -1));
+//     filenames.forEach((filename, index) => {
+//       const image = new Image();
+//       image.src = filename;
+//       image.id = index;
+//       image.onload = () => {
+//         slider.appendChild(image);
+//       };
+//     });
+//   } catch (error) {
+//     console.error("Error loading images:", error);
+//   }
+// }
 
-loadImages();
+// loadImages();
 
 class Slider {
   constructor(sliderId) {
@@ -400,23 +400,19 @@ class Slider {
   }
 }
 
-setTimeout(() => {
-  const sl = new Slider("slider");
-  sl.startSlider();
-  document.addEventListener("click", (e) => {
-    e.target.matches("#arrow-right")
-      ? sl.nextSlide()
-      : e.target.matches("#arrow-left")
-      ? sl.prevSlide()
-      : false;
-    const arr = document.querySelectorAll(".dot");
-    if (e.target.matches(".dot")) {
-      var i = [...arr].indexOf(e.target);
-      sl.matchDot2Img(i);
-    } else {
-      false;
-    }
-  });
-}, 1000);
-
-
+const sl = new Slider("slider");
+sl.startSlider();
+document.addEventListener("click", (e) => {
+  e.target.matches("#arrow-right")
+    ? sl.nextSlide()
+    : e.target.matches("#arrow-left")
+    ? sl.prevSlide()
+    : false;
+  const arr = document.querySelectorAll(".dot");
+  if (e.target.matches(".dot")) {
+    var i = [...arr].indexOf(e.target);
+    sl.matchDot2Img(i);
+  } else {
+    false;
+  }
+});
