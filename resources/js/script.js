@@ -31,7 +31,9 @@ function dropdown_menu_ajust() {
 }
 
 if (window.innerWidth < 1000) {
-  document.getElementById("navbar").onclick = dropdown_menu_close;
+  document
+    .getElementById("navbar")
+    .addEventListener("click", dropdown_menu_close);
 }
 
 /*----------Progress Bar----------*/
@@ -48,13 +50,13 @@ function progressBar() {
 
 const goUpBtn = document.getElementById("return-btn");
 
-goUpBtn.onclick = () => {
+goUpBtn.addEventListener("click", () => {
   window.setTimeout(() => window.scrollTo(0, 0), 200);
   if (window.innerWidth < 1000) {
     goUpBtn.style.scale = 1.25;
     setTimeout(() => (goUpBtn.style.scale = ""), 500);
   }
-};
+});
 
 /*----------Contact Form Validation----------*/
 
@@ -62,7 +64,7 @@ const submitBtn = document.getElementById("form-submit");
 const email_validate_pattern =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-submitBtn.onclick = (event) => {
+submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
   let validator = true;
   const getName = document.getElementById("name");
@@ -97,11 +99,11 @@ submitBtn.onclick = (event) => {
   getName.oninput = () => getName.classList.remove("invalid");
   getEmail.oninput = () => getEmail.classList.remove("invalid");
   getConsent.onchange = () => checkmark.classList.remove("invalid");
-  messages.onclick = () => {
+  messages.addEventListener("click", () => {
     messages.classList.remove("messages", "fail");
     messages.innerText = " ";
-  };
-};
+  });
+});
 
 /*----------Validation Functions----------*/
 
@@ -164,27 +166,42 @@ async function jsonplaceholder(name, email, messages) {
 
 /*----------Subscribe Form----------*/
 
+const sections = document.getElementsByTagName("section");
+
 const subscribeElement = document.getElementById("subscribe");
 document.body.addEventListener("click", (event) => {
   if (!subscribeElement.contains(event.target)) {
     subscribeElement.style.display = "none";
+    for (const section of sections) {
+      section.style.filter = "none";
+    }
   }
 });
 
 const closeSubscribe = document.getElementById("close-icon");
-closeSubscribe.onclick = () =>
-  (document.getElementById("subscribe").style.display = "none");
+closeSubscribe.addEventListener("click", () => {
+  document.getElementById("subscribe").style.display = "none";
+  for (const section of sections) {
+    section.style.filter = "none";
+  }
+});
 
-document.body.onkeydown = (event) => {
+document.body.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     document.getElementById("subscribe").style.display = "none";
+    for (const section of sections) {
+      section.style.filter = "none";
+    }
   }
-};
+});
 
 setTimeout(() => {
   if (localStorage.getItem("subscribeViewed") === null) {
     const subscribe = document.getElementById("subscribe");
     subscribe.style.display = "block";
+    for (const section of sections) {
+      section.style.filter = "blur(10px)";
+    }
     localStorage.setItem("subscribeViewed", true);
   }
 }, 5000);
@@ -205,7 +222,7 @@ window.addEventListener("DOMContentLoaded", () => {
 /*----------Subscribe Form Validation----------*/
 
 const subscribeBtn = document.getElementById("subscribe-form-submit");
-subscribeBtn.onclick = (event) => {
+subscribeBtn.addEventListener("click", (event) => {
   event.preventDefault();
   let validator = true;
   const getEmail = document.getElementById("subscribe-email");
@@ -232,11 +249,11 @@ subscribeBtn.onclick = (event) => {
   }
   getEmail.oninput = () => getEmail.classList.remove("invalid");
   getConsent.onchange = () => checkmark.classList.remove("invalid");
-  messages.onclick = () => {
+  messages.addEventListener("click", () => {
     messages.classList.remove("messages", "fail", "subscribe-position");
     messages.innerText = " ";
-  };
-};
+  });
+});
 
 /*----------Currency Rates API----------*/
 
@@ -310,31 +327,6 @@ currencySelector.oninput = async (event) => {
 };
 
 /*---------Slider----------*/
-
-// const slider = document.getElementById("slider");
-// const imageFolder = "./resources/images/slider"; // Image Files Path
-
-// async function loadImages() {
-//   try {
-//     const response = await fetch(imageFolder);
-//     const text = await response.text();
-//     const filenames = text
-//       .match(/href="([^"]+\.(?:jpg|jpeg))"/gi)
-//       .map((match) => match.slice(6, -1));
-//     filenames.forEach((filename, index) => {
-//       const image = new Image();
-//       image.src = filename;
-//       image.id = index;
-//       image.onload = () => {
-//         slider.appendChild(image);
-//       };
-//     });
-//   } catch (error) {
-//     console.error("Error loading images:", error);
-//   }
-// }
-
-// loadImages();
 
 class Slider {
   constructor(sliderId) {
