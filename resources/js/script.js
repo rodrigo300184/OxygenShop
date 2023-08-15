@@ -33,7 +33,7 @@ function dropdown_menu_ajust() {
 if (window.innerWidth < 1000) {
   document
     .getElementById("navbar")
-    .addEventListener("click", dropdown_menu_close);
+    .addEventListener("click",() => setTimeout(dropdown_menu_close,300));
 }
 
 /*----------Progress Bar----------*/
