@@ -214,6 +214,9 @@ window.addEventListener("DOMContentLoaded", () => {
     if (percentage > 25 && localStorage.getItem("subscribeViewed") === null) {
       const subscribe = document.getElementById("subscribe");
       subscribe.style.display = "block";
+      for (const section of sections) {
+        section.style.filter = "blur(10px)";
+      }
       localStorage.setItem("subscribeViewed", true);
     }
   }

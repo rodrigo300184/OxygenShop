@@ -111,16 +111,22 @@ header {
     position: relative;
   }
 
+  .subscribe-container{
+    display:flex;
+    justify-content: center;
+    
+  }
+
   .subscribe{
     display: none;
-    position: relative;
+    position: fixed;
     top:80px;
-    margin: 0 auto;
     height: 298px;
     width:293px;
-    background-color: rgba($third-circle-color,0.6);
+    background-color: rgba($third-circle-color,0.7);
     border: 2px solid $third-circle-color;
     border-radius: 25px;
+    z-index: 7;
   }
 
   .subscribe-title{
@@ -311,10 +317,10 @@ header {
 
     .subscribe{
       display: none;
-      position: relative;
-      top:80px;
+      position: fixed;
+      top:200px;
       margin: 0 auto;
-      background-color: rgba($third-circle-color,0.6);
+      background-color: rgba($third-circle-color,0.7);
     }
 
     #return-btn{
