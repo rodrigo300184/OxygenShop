@@ -158,7 +158,6 @@ async function jsonplaceholder(name, email, messages) {
   } catch (error) {
     messages.classList.add("messages", "fail");
     messages.innerText = "Something went wrong!";
-    console.log("mal");
     console.log(error);
   }
 }
