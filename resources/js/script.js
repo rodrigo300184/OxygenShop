@@ -152,7 +152,6 @@ async function jsonplaceholder(name, email, messages) {
       const jsonResponse = await response.json();
       messages.classList.add("messages");
       messages.innerText = "Data has been successfully received!";
-      console.log(jsonResponse);
     } else {
       throw error;
     }
