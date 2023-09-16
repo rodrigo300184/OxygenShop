@@ -32,6 +32,7 @@ Para ejecutar la aplicación localmente, simplemente clona este repositorio y ab
 git clone https://github.com/rodrigo300184/OxygenShop.git
 cd OxygenShop
 
+```
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 # Oxygen-Shop
