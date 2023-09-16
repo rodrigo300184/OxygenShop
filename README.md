@@ -1,6 +1,6 @@
 # Oxygen-Shop
 
-![Vista previa de la aplicación](resources\images\Oxygen-Shop.png)
+![Vista previa de la aplicación](https://github.com/rodrigo300184/OxygenShop/blob/main/resources/images/Oxygen-Shop.png)
 
 ¡Bienvenido a Oxygen-Shop! Esta es mi primera aventura en el mundo de JavaScript, donde he desarrollado una página web totalmente responsive. En la página puedes interactuar con diferentes formularios (de suscripción y de registro utilizando API de https://jsonplaceholder.typicode.com/), distintas opciones de moneda (EUR, GBP, USD) obtenidas al tipo de cambio actualizado utilizando la API de https://www.jsdelivr.com/ y un slider de imagenes.
 
