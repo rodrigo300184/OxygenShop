@@ -29,6 +29,6 @@ Oxygen-Shop es una página web diseñada y desarrollada desde cero utilizando te
 Para ejecutar la aplicación localmente, simplemente clona este repositorio y abre el archivo `index.html` en tu navegador web.
 
 ```bash
-git clone https://github.com/TuUsuario/oxygen-shop.git
-cd oxygen-shop
+git clone https://github.com/rodrigo300184/OxygenShop.git
+cd OxygenShop
 
