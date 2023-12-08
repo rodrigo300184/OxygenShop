@@ -78,6 +78,7 @@ a {
   border-radius: 40px;
   width: 310px;
   height: 67px;
+  transition: all 200ms;
 }
 .bt-1 a {
   display: block;
@@ -88,6 +89,10 @@ a {
   text-align: center;
   color: #ffffff;
   text-decoration: none;
+}
+.bt-1:hover {
+  transition: all 200ms;
+  transform: scale(1.05);
 }
 
 .picture-1 {
