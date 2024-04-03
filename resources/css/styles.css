@@ -315,6 +315,10 @@ a {
 }
 
 /*----------Section 3----------*/
+.section-3 {
+  scroll-margin-top: 80px;
+}
+
 .section-3-title {
   line-height: normal;
   margin-top: 53px;
