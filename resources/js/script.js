@@ -260,9 +260,9 @@ subscribeBtn.addEventListener("click", (event) => {
 
 const getRates = async () => {
   const url1 =
-    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
+    "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
   const url2 =
-    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.min.json";
+    "https://latest.currency-api.pages.dev/v1/currencies/usd.json";
   try {
     const response = await fetch(url1, { method: "GET" });
     if (response.ok) {
